@@ -1,11 +1,12 @@
-import HomePage from "./Components/HomePage";
-
+import './App.css'
+import NavBar from "./Components/NavBar.tsx";
 function App() {
+
   return (
     <>
-      <HomePage />
+    <NavBar/>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
