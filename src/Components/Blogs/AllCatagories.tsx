@@ -9,9 +9,9 @@ const AllCatagories = () =>{
         <div className="text-gray-800 text-4xl font-bold leading-10 tracking-tighter max-md:max-w-full">
           All Categories
         </div>
-        <div className="mt-12 max-md:max-w-full max-md:mt-10">
+        <div className="mt-12 max-md:max-w-full max-md:mt-10 ">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-            <div className="flex flex-col items-stretch w-3/12 max-md:w-full max-md:ml-0">
+            <div className="flex flex-col items-stretch w-3/12 max-md:w-full max-md:ml-0 hover:bg-amber-300 hover:cursor-pointer">
               <span className="border border-[color:var(--Medium-grey,#6D6E76)] flex grow flex-col w-full pl-8 pr-14 py-9 border-solid items-start max-md:mt-8 max-md:px-5">
                 <div className="flex-col fill-orange-50 overflow-hidden relative flex aspect-square w-12 max-w-full justify-center items-center">
                   <img
@@ -34,7 +34,7 @@ const AllCatagories = () =>{
               </span>
             </div>
             <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
-              <span className="bg-amber-300 flex grow flex-col w-full pl-8 pr-14 py-9 items-start max-md:mt-8 max-md:px-5">
+              <span className="hover:bg-amber-300 hover:cursor-pointer flex grow flex-col w-full pl-8 pr-14 py-9 items-start max-md:mt-8 max-md:px-5">
                 <img
                     loading="lazy"
                     srcSet={startap}
@@ -48,7 +48,7 @@ const AllCatagories = () =>{
                 </div>
               </span>
             </div>
-            <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0 hover:bg-amber-300 hover:cursor-pointer">
               <span className="border border-[color:var(--Medium-grey,#6D6E76)] flex grow flex-col w-full pl-8 pr-14 py-9 border-solid items-start max-md:mt-8 max-md:px-5">
                 <img
                     loading="lazy"
@@ -63,7 +63,7 @@ const AllCatagories = () =>{
                 </div>
               </span>
             </div>
-            <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
+            <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0 hover:bg-amber-300 hover:cursor-pointer">
               <span className="border border-[color:var(--Medium-grey,#6D6E76)] flex grow flex-col w-full pl-8 pr-14 py-9 border-solid items-start max-md:mt-8 max-md:px-5">
                 <img
                     loading="lazy"
