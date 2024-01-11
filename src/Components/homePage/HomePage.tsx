@@ -2,10 +2,12 @@ import menWithComputer from "../../assets/menWithComputer.png";
 import BusinessCard from "./BusinessCard";
 import ChooseCategory from "./ChooseCategory";
 import FuturePosts from "./FuturePosts";
-
+import NavBar from "../NavBar.tsx";
+import Footer from "../Footer.tsx";
 const HomePage = () => {
   return (
     <>
+      <NavBar/>
       <div className="w-full relative">
         <img className="w-full brightness-50" src={menWithComputer} />
         <div className="absolute top-52 left-20 w-3/4 h-96 text-white font-sans ">
@@ -32,6 +34,8 @@ const HomePage = () => {
       <FuturePosts />
       <BusinessCard />
       <ChooseCategory />
+
+      <Footer/>
     </>
   );
 };

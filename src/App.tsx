@@ -1,10 +1,21 @@
 import './App.css'
-import NavBar from "./Components/NavBar.tsx";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Blog from "./Components/Blogs/Blog.tsx";
+import HomePage from "./Components/homePage/HomePage.tsx";
+import AboutUs from "./Components/AboutUs/AboutUs.tsx";
+import ContactUs from "./Components/ContactUs/ContactUs.tsx";
 function App() {
 
   return (
     <>
-    <NavBar/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage/>}></Route>
+          <Route path="/blog" element={<Blog/>}></Route>
+          <Route path="/aboutus" element={<AboutUs/>}></Route>
+          <Route path="/contactus" element={<ContactUs/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
