@@ -18,11 +18,13 @@ const ChooseCategory = () => {
           </p>
         </div>
         <div className="border-2 border-solid border-slate-300 mx-5 my-5 px-4 pt-4 hover:bg-amber-300">
-          <img className="pt-4" src={startap}></img>
-          <p className="pt-2 pb-5 font-bold text-2xl">Startup</p>
-          <p className="text-slate-500 pb-11">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          </p>
+          <a href="/blogPost">
+            <img className="pt-4" src={startap}></img>
+            <p className="pt-2 pb-5 font-bold text-2xl">Startup</p>
+            <p className="text-slate-500 pb-11">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            </p>
+          </a>
         </div>
         <div className="border-2 border-solid border-slate-300 mx-5 my-5 px-4 pt-4 hover:bg-amber-300">
           <img src={economy}></img>
