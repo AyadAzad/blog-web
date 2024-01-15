@@ -18,6 +18,7 @@ function App() {
           <Route path="/contactus" element={<ContactUs />}></Route>
           <Route path="/blogPost" element={<BlogPost />}></Route>
           <Route path="/privacyPolice" element={<PrivacyPolice />}></Route>
+          <Route path="/contactUs" element={<ContactUs />}></Route>
         </Routes>
       </BrowserRouter>
     </>
