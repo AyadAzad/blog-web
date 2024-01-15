@@ -6,7 +6,7 @@ const FuturePosts = () => {
       <div>
         <p className="text-3xl font-bold pb-11">Featured post</p>
         <div>
-          <img className="w-3/4 pb-11" src={whiteHouse} />
+          <img className="w-3/4 pb-11 cursor-pointer" src={whiteHouse} />
           <p className="pb-11 text-base">
             By <strong className="text-indigo-700">John Deo</strong>| May 23,
             2022
@@ -20,7 +20,7 @@ const FuturePosts = () => {
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident.
           </p>
-          <button className="font-bold pb-2 bg-amber-300 text-black w-52 h-14">
+          <button className="font-bold pb-2 bg-amber-300 text-black w-52 h-14 cursor-pointer">
             Read More &#62;
           </button>
         </div>
@@ -34,7 +34,9 @@ const FuturePosts = () => {
               2022
             </p>
             <p className="text-2xl font-bold">
+              <a href="/blog">
               8 Figma design systems that you can download for free today.
+              </a>
             </p>
           </div>
           <div className="mb-20 px-2.5 py-2.5 hover:bg-amber-100">
