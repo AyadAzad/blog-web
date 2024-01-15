@@ -5,6 +5,7 @@ import photoOfWomen from "../../assets/photoOfWomen.png";
 import Text from "./Text";
 import WhatToReadNext from "./WhatToReadNext";
 import JoinNow from "../homePage/JoinNow";
+import Footer from "../Footer";
 
 const BlogPost = () => {
   return (
@@ -36,6 +37,7 @@ const BlogPost = () => {
       <Text />
       <WhatToReadNext />
       <JoinNow />
+      <Footer />
     </>
   );
 };

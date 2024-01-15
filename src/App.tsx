@@ -5,6 +5,8 @@ import HomePage from "./Components/homePage/HomePage.tsx";
 import AboutUs from "./Components/AboutUs/AboutUs.tsx";
 import ContactUs from "./Components/ContactUs/ContactUs.tsx";
 import BlogPost from "./Components/BlogPost/BlogPost.tsx";
+import PrivacyPolice from "./Components/PrivacyPolice.tsx";
+
 function App() {
   return (
     <>
@@ -15,6 +17,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />}></Route>
           <Route path="/contactus" element={<ContactUs />}></Route>
           <Route path="/blogPost" element={<BlogPost />}></Route>
+          <Route path="/privacyPolice" element={<PrivacyPolice />}></Route>
         </Routes>
       </BrowserRouter>
     </>
