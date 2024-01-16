@@ -33,9 +33,9 @@ function NavBar() {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
@@ -45,8 +45,8 @@ function NavBar() {
               <li>
                 <a
                   href="/"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                  aria-current="page"
+                  className=" block py-2 px-3 bg-blue-700 rounded md:bg-transparent md:text-amber-400 md:p-0 dark:text-white md:dark:text-white md:hover:text-blue-500"
+
                 >
                   Home
                 </a>
