@@ -19,6 +19,7 @@ function App() {
           <Route path="/blogPost" element={<BlogPost />}></Route>
           <Route path="/privacyPolice" element={<PrivacyPolice />}></Route>
           <Route path="/contactUs" element={<ContactUs />}></Route>
+          <Route path="/aboutUs" element={<AboutUs />}></Route>
         </Routes>
       </BrowserRouter>
     </>
