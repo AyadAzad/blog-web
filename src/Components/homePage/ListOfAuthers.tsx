@@ -16,7 +16,7 @@ const ListOfAuthers = () => {
           <div className="flex items-center justify-center">
             <img src={man1}></img>
           </div>
-          <p className="pb-5 font-bold text-2xl text-center">Floyd Miles</p>
+          <p className="pb-5 font-bold text-2xl text-center"><a href="/authors">Floyd Miles</a></p>
           <p className="text-slate-500 pb-11 text-center">
             Content Writer @Company
           </p>

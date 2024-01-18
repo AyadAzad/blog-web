@@ -6,7 +6,7 @@ import AboutUs from "./Components/AboutUs/AboutUs.tsx";
 import ContactUs from "./Components/ContactUs/ContactUs.tsx";
 import BlogPost from "./Components/BlogPost/BlogPost.tsx";
 import PrivacyPolice from "./Components/PrivacyPolice.tsx";
-
+import Authors from "./Components/author/Authors.tsx";
 function App() {
   return (
     <>
@@ -20,6 +20,7 @@ function App() {
           <Route path="/privacyPolice" element={<PrivacyPolice />}></Route>
           <Route path="/contactUs" element={<ContactUs />}></Route>
           <Route path="/aboutUs" element={<AboutUs />}></Route>
+          <Route path="/authors" element={<Authors />}></Route>
         </Routes>
       </BrowserRouter>
     </>
