@@ -11,7 +11,7 @@ const BlogPost = () => {
   return (
     <>
       <NavBar />
-      <div className="ml-80">
+      <div className="md:ml-80">
         <div className="pt-20 flex flex-row">
           <div>
             <img src={profilePicture}></img>
@@ -23,7 +23,7 @@ const BlogPost = () => {
             </p>
           </div>
         </div>
-        <p className="pt-5 pb-11 text-6xl w-3/4">
+        <p className="pt-5 pb-11 md:text-6xl text-3xl w-3/4">
           Step-by-step guide to choosing great font pairs
         </p>
         <div className="pt-2 pb-11 flex flex-row">

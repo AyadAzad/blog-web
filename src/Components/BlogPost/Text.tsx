@@ -1,6 +1,6 @@
 const Text = () => {
   return (
-    <div className="ml-80 mt-20 w-7/12 pb-20 pr-10">
+    <div className="ml-2 md:ml-80 mt-20 md:w-7/12 pb-20 md:pr-10 ">
       <p className="text-2xl font-bold">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
       </p>

@@ -1,20 +1,22 @@
-import Footer from "./Footer";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 const PrivacyPolice = () => {
   return (
     <>
       <NavBar />
       <div>
-        <div className="bg-gray-100 text-center pt-24 pb-24">
-          <p className="font-bold text-5xl">Privacy Police</p>
+        <div className="bg-gray-100 text-center pt-20 pb-20 md:pt-24 md:pb-24">
+          <p className="font-bold text-5xl md:text-6xl">Privacy Policy</p>
           <p className="text-slate-500 pt-5">
             Last Updated on 27th January 2022
           </p>
         </div>
-        <div className="ml-96 pt-32 w-2/4 pb-32">
-          <p className="text-3xl font-bold">Lorem ipsum dolor sit amet</p>
-          <p className=" pt-11">
+        <div className="ml-2 md:ml-96 pt-10 md:pt-32 w-full md:w-2/4 pb-10 md:pb-32">
+          <p className="text-2xl md:text-3xl font-bold">
+            Lorem ipsum dolor sit amet
+          </p>
+          <p className="pt-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -33,11 +35,11 @@ const PrivacyPolice = () => {
             gravida dictum fusce ut placerat orci nulla. Neque convallis a cras
             semper auctor neque vitae tempus quam.
           </p>
-          <p className="pt-11 text-3xl font-bold">
+          <p className="pt-5 text-2xl md:text-3xl font-bold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor.
           </p>
-          <p className="pt-11">
+          <p className="pt-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
             blandit massa enim nec. Scelerisque viverra mauris in aliquam sem.
@@ -51,7 +53,7 @@ const PrivacyPolice = () => {
             fusce ut placerat orci nulla. Neque convallis a cras semper auctor
             neque vitae tempus quam.
           </p>
-          <p className="pt-11">
+          <p className="pt-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
             blandit massa enim nec. Scelerisque viverra mauris in aliquam sem.
