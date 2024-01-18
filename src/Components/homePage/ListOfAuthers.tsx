@@ -17,7 +17,9 @@ const ListOfAuthers = () => {
             <img src={man1} alt="Floyd Miles"></img>
           </div>
           <p className="pb-3 md:pb-5 font-bold text-lg md:text-2xl text-center">
+            <a href="/authors">
             Floyd Miles
+            </a>
           </p>
           <p className="text-slate-500 pb-6 md:pb-11 text-center">
             Content Writer @Company
