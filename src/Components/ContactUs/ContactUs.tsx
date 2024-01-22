@@ -12,9 +12,9 @@ const ContactUs = () => {
         <p className="font-bold text-5xl">Let’s Start a Conversation</p>
         <p className="flex justify-center items-center ">
           <p className="text-slate-500 pt-5 w-2/4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim.
+            If you're a developer or a content writer and want to join us, or if you have a query or
+              comment about the website you send us a message
+              through this form.
           </p>
         </p>
       </div>
