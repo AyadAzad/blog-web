@@ -29,7 +29,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="pl-4 md:pl-32 relative mr-4">
+      <div className="pl-4 md:pl-32 relative mr-4 md:w-11/12">
         <img className="w-full md:w-auto" src={people} alt="People"></img>
         <div className="absolute bottom-0 md:ml-20">
           <div className="bg-amber-300 flex items-center justify-center py-4 md:py-8">
