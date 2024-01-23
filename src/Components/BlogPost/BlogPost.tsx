@@ -24,7 +24,7 @@ const BlogPost = () => {
           </div>
         </div>
         <p className="pt-5 pb-11 md:text-6xl text-3xl w-3/4">
-          Step-by-step guide to choosing great font pairs
+          How to create a React JS project
         </p>
         <div className="pt-2 pb-11 flex flex-row">
           <img className="w-7" src={startap}></img>
