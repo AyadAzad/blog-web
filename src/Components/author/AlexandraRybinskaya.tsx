@@ -1,10 +1,10 @@
-import CloseUpPhotography from "../../assets/close-up-photography-of-man-wearing-sunglasses-1212984.png";
+import AlexandraRybinskay from "../../assets/Alexandra_Rybinskaya.jpg";
 import ManInBlack from "../../assets/man-in-black-crew-neck-t-shirt-sitting-beside-woman-in-gray-crew-neck-t-shirt-3153201.png";
 import StainedGlass from "../../assets/stained-glass-high-rise-building-1106476.png";
 import Pattern from "../../assets/Pattern.png";
 import Footer from "../Footer.tsx";
 import NavBar from "../NavBar.tsx";
-const Authors = () => {
+const AlexandraRybinskaya = () => {
   return (
     <>
       <NavBar />
@@ -16,14 +16,14 @@ const Authors = () => {
                 <div className="flex flex-col items-stretch w-3/12 max-md:w-full max-md:ml-0">
                   <img
                     loading="lazy"
-                    srcSet={CloseUpPhotography}
-                    className="aspect-[0.74] object-contain object-center w-[251px] overflow-hidden shrink-0 max-w-full grow max-md:mt-8"
+                    src={AlexandraRybinskay}
+                    className="rounded-full mt-10 md:w-full w-2/4 ml-5"
                   />
                 </div>
                 <div className="flex flex-col items-stretch w-9/12 ml-5 max-md:w-full max-md:ml-0">
                   <span className="flex grow flex-col mt-7 items-start max-md:max-w-full max-md:mt-10">
                     <div className="justify-center text-gray-800 text-5xl font-bold leading-[64px] tracking-tighter self-stretch max-md:max-w-full max-md:text-4xl max-md:leading-[60px]">
-                      Hey there, I’m Andrew Jonhson and welcome to my Blog
+                      Hey there, I’m Alexandra Rybinskaya and welcome to my Blog
                     </div>
                     <div className="justify-center text-zinc-500 text-base leading-7 self-stretch max-w-[720px] mr-5 mt-14 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -98,4 +98,4 @@ const Authors = () => {
   );
 };
 
-export default Authors;
+export default AlexandraRybinskaya;

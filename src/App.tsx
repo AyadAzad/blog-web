@@ -6,7 +6,10 @@ import AboutUs from "./Components/AboutUs/AboutUs.tsx";
 import ContactUs from "./Components/ContactUs/ContactUs.tsx";
 import BlogPost from "./Components/BlogPost/BlogPost.tsx";
 import PrivacyPolice from "./Components/privacyPolice/PrivacyPolice.tsx";
-import Authors from "./Components/author/Authors.tsx";
+import AyadAzad from "./Components/author/AyadAzad.tsx";
+import AlexandraRybinskaya from "./Components/author/AlexandraRybinskaya.tsx";
+import JennyWilson from "./Components/author/JennyWilson.tsx";
+import LeslieAlexander from "./Components/author/LeslieAlexander.tsx";
 function App() {
   return (
     <>
@@ -20,7 +23,13 @@ function App() {
           <Route path="/privacyPolice" element={<PrivacyPolice />}></Route>
           <Route path="/contactUs" element={<ContactUs />}></Route>
           <Route path="/aboutUs" element={<AboutUs />}></Route>
-          <Route path="/authors" element={<Authors />}></Route>
+          <Route path="/AyadAzad" element={<AyadAzad />}></Route>
+          <Route
+            path="/AlexandraRybinskaya"
+            element={<AlexandraRybinskaya />}
+          ></Route>
+          <Route path="/JennyWilson" element={<JennyWilson />}></Route>
+          <Route path="/LeslieAlexander" element={<LeslieAlexander />}></Route>
         </Routes>
       </BrowserRouter>
     </>
