@@ -16,14 +16,14 @@ const AboutUs = () => {
             <p className="text-base pb-3 md:pb-5">ABOUT US</p>
           </div>
           <div className="flex flex-col md:flex-row items-start justify-between w-full">
-            <p className="text-3xl md:text-4xl font-bold max-w-2xl pb-4 md:pb-0">
+            <p className="text-3xl md:text-4xl font-bold max-w-2xl pb-4 md:pb-0 md:pr-32">
               We are a team of content writers who share their learnings
             </p>
             <div className="text-base text-slate-500 max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Welcome to InsightBlog, your go-to source for creative insights,
+              inspiration, and knowledge. We are a passionate community of
+              content creators dedicated to sharing our experiences, learning,
+              and stories with fellow creatives around the world.
             </div>
           </div>
         </div>

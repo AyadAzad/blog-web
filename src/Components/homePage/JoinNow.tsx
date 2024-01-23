@@ -7,8 +7,8 @@ const JoinNow = () => {
             Join our team to be a part of our story
           </p>
           <p className="text-slate-500 pb-11">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Feel free to connect with us on social media, share your thoughts,
+            and let's create something extraordinary together!
           </p>
           <button className="font-bold pb-2 bg-amber-300 text-black w-52 h-14">
             Join Now

@@ -5,7 +5,7 @@ import HomePage from "./Components/homePage/HomePage.tsx";
 import AboutUs from "./Components/AboutUs/AboutUs.tsx";
 import ContactUs from "./Components/ContactUs/ContactUs.tsx";
 import BlogPost from "./Components/BlogPost/BlogPost.tsx";
-import PrivacyPolice from "./Components/PrivacyPolice.tsx";
+import PrivacyPolice from "./Components/privacyPolice/PrivacyPolice.tsx";
 import Authors from "./Components/author/Authors.tsx";
 function App() {
   return (

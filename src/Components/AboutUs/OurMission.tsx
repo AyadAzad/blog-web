@@ -7,8 +7,11 @@ const OurMission = () => {
           We are a community of content writers who share their learnings
         </p>
         <p className="text-slate-500 pb-6 md:pb-11">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          At InsightBlog, we believe in the power of storytelling and its
+          ability to connect people, inspire change, and foster creativity.
+          Whether you're an aspiring artist, designer, writer, or anyone with a
+          passion for creativity, you'll find a home here to explore, learn, and
+          grow.
         </p>
       </div>
       <div className="w-full md:w-2/4 pr-4 md:pr-20">
@@ -19,10 +22,10 @@ const OurMission = () => {
           Creating valuable content for creatives all around the world
         </p>
         <p className="text-slate-500 pb-6 md:pb-11">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Our mission is to curate valuable content, share insightful tips and
+          tutorials, and create a supportive community for like-minded
+          individuals. We aim to be a platform where creativity knows no bounds,
+          and everyone is encouraged to express their unique voice.
         </p>
       </div>
     </div>

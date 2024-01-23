@@ -11,15 +11,14 @@ const OurTeam = () => {
               Our team of creatives
             </p>
             <p className="pb-4 md:pb-8 font-medium text-base md:text-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
+              We sincerely believe that our diversity makes us stronger and
+              allows us to provide unique ideas to our readers.
             </p>
             <p className="text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+              The blog team is a group of dedicated professionals who are ready
+              to share their knowledge and experience. We appreciate the
+              contribution of each member, and it is the interaction of our team
+              that gives life to our creative ideas and projects.
             </p>
           </div>
           <div className="mt-8 md:mt-0">
@@ -35,15 +34,14 @@ const OurTeam = () => {
               Why we started this Blog
             </p>
             <p className="pb-4 md:pb-8 font-medium text-base md:text-2xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt.
+              In our world, creativity is a key element of successful
+              development,
             </p>
             <p className="text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+              The launch of this blog was an opportunity for us to create a
+              community of like-minded people where people from different fields
+              of creativity can share experiences, support each other and
+              discover amazing perspectives of the creative process together.
             </p>
           </div>
         </div>
