@@ -17,7 +17,7 @@ const ListOfAuthers = () => {
             <img className="w-32 h-32" src={Ayad_Azad} alt="Ayad Azad"></img>
           </div>
           <p className="pb-3 md:pb-5 font-bold text-lg md:text-2xl text-center">
-            <a href="/authors">Ayad Azad</a>
+            <a href="/AyadAzad">Ayad Azad</a>
           </p>
           <p className="text-slate-500 pb-6 md:pb-11 text-center">
             Content Writer @Company
@@ -36,7 +36,7 @@ const ListOfAuthers = () => {
             ></img>
           </div>
           <p className="pb-3 md:pb-5 font-bold text-lg md:text-2xl text-center">
-            Alexandra Rybinskaya
+            <a href="/AlexandraRybinskaya"> Alexandra Rybinskaya</a>
           </p>
           <p className="text-slate-500 pb-6 md:pb-11 text-center">
             Content Writer @Company
@@ -51,7 +51,7 @@ const ListOfAuthers = () => {
             <img src={women2} alt="Jenny Wilson"></img>
           </div>
           <p className="pb-3 md:pb-5 font-bold text-lg md:text-2xl text-center">
-            Jenny Wilson
+            <a href="/JennyWilson">Jenny Wilson</a>
           </p>
           <p className="text-slate-500 pb-6 md:pb-11 text-center">
             Content Writer @Company
@@ -66,7 +66,7 @@ const ListOfAuthers = () => {
             <img src={women3} alt="Leslie Alexander"></img>
           </div>
           <p className="pb-3 md:pb-5 font-bold text-lg md:text-2xl text-center">
-            Leslie Alexander
+            <a href="/LeslieAlexander">Leslie Alexander</a>
           </p>
           <p className="text-slate-500 pb-6 md:pb-11 text-center">
             Content Writer @Company
