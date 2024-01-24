@@ -7,7 +7,7 @@ import WhatToReadNext from "./WhatToReadNext";
 import JoinNow from "../homePage/JoinNow";
 import Footer from "../Footer";
 
-const BlogPost = () => {
+const BlogPostBusiness = () => {
   return (
     <>
       <NavBar />
@@ -24,7 +24,7 @@ const BlogPost = () => {
           </div>
         </div>
         <p className="pt-5 pb-11 md:text-6xl text-3xl w-3/4">
-          How to create a React JS project
+          How to open your own business
         </p>
         <div className="pt-2 pb-11 flex flex-row">
           <img className="w-7" src={startap}></img>
@@ -42,4 +42,4 @@ const BlogPost = () => {
   );
 };
 
-export default BlogPost;
+export default BlogPostBusiness;
