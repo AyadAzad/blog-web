@@ -9,8 +9,8 @@ import AyadAzad from "./Components/author/AyadAzad.tsx";
 import AlexandraRybinskaya from "./Components/author/AlexandraRybinskaya.tsx";
 import JennyWilson from "./Components/author/JennyWilson.tsx";
 import LeslieAlexander from "./Components/author/LeslieAlexander.tsx";
-import BlogPostStartup from "./Components/BlogPostStartup/BlogPostStartup.tsx";
-import BlogPostBusiness from "./Components/BlogPostBusiness/BlogPostBusiness.tsx";
+import BlogPostStartup from "./Components/BlogPost/BlogPostStartup.tsx";
+import BlogPostBusiness from "./Components/BlogPost/BlogPostBusiness.tsx";
 function App() {
   return (
     <>

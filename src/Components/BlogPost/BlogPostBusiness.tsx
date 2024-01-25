@@ -2,8 +2,8 @@ import NavBar from "../NavBar";
 import profilePicture from "../../assets/ProfilePicture.png";
 import startap from "../../assets/startap.png";
 import photoOfWomen from "../../assets/photoOfWomen.png";
-import Text from "./Text";
-import WhatToReadNext from "./WhatToReadNext";
+import Text from "./TextAboutBusiness";
+import WhatToReadNext from "../BlogPost/WhatToReadNext";
 import JoinNow from "../homePage/JoinNow";
 import Footer from "../Footer";
 

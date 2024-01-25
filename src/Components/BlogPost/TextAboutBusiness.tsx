@@ -1,4 +1,4 @@
-import MarkdownFileRenderer from "./MarkdownFileRenderer.tsx";
+import MarkdownFileRenderer from "../BlogPost/MarkdownFileRenderer.tsx";
 
 const Text = () => {
   const HowToOpenYourOwnBusiness =
