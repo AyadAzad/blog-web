@@ -4,7 +4,7 @@ import FilterPosts from "./FilterPosts.tsx";
 import Footer from "../Footer.tsx";
 
 const Business = () =>{
-    const filterPostsByCategory = (category) => {
+    const filterPostsByCategory = (category : string) => {
         return PostListData.filter(post => post.catagory === category);
     };
 

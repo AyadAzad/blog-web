@@ -1,5 +1,18 @@
+import React from "react";
 
-const FilterPosts = ({posts, title}) =>{
+interface Post{
+    id: number,
+    title:string,
+    picture:string,
+    catagory:string,
+    text:string
+}
+interface FilterPostProps{
+    posts:Post[],
+    title:string
+
+}
+const FilterPosts : React.FC<FilterPostProps> = ({posts, title}) =>{
     return (
         <div className="flex w-full flex-col mt-20 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
             <div className="text-gray-800 text-5xl font-bold leading-[63.84px] tracking-tighter self-stretch max-md:max-w-full max-md:text-4xl">

@@ -4,10 +4,9 @@ import NavBar from "../NavBar.tsx";
 import Footer from "../Footer.tsx";
 const Technology = () =>{
     // Function to filter posts based on category
-    const filterPostsByCategory = (category) => {
+    const filterPostsByCategory = (category : string) => {
         return PostListData.filter(post => post.catagory === category);
     };
-
     // Get technology-related posts
     const technologyPosts = filterPostsByCategory('Technology');
 
