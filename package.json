@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
-    "flowbite": "^2.2.1",
-    "flowbite-react": "^0.7.2",
     "github-markdown-css": "^5.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
