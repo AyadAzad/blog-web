@@ -1,13 +1,7 @@
-const Footer = () => {
-  // array of objects
-  const menu = [
-    { id: 1, label: "Home", link: "/" },
-    { id: 2, label: "Blog", link: "/blog" },
-    { id: 3, label: "AboutUs", link: "/aboutus" },
-    { id: 4, label: "ContactUs", link: "/contactus" },
-    { id: 5, label: "Privacy Policy", link: "/privacyPolice" },
-  ];
+import { Link } from "react-router-dom";
+import { footerRoutes, generateRoutePath } from "../App/routes";
 
+const Footer = () => {
   return (
     <>
       <footer className="bg-white dark:bg-gray-900">
@@ -48,9 +42,11 @@ const Footer = () => {
             <div>
               <div>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium flex flex-row">
-                  {menu.map((item) => (
-                    <li key={item.id} className="px-2 hover:text-amber-400">
-                      <a href={item.link}>{item.label}</a>
+                  {footerRoutes.map((route) => (
+                    <li key={route.key} className="px-2 hover:text-amber-400">
+                      <Link to={generateRoutePath({ name: route.key })}>
+                        {route.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
