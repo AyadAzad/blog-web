@@ -9,8 +9,7 @@ import AyadAzad from "./Components/author/AyadAzad.tsx";
 import AlexandraRybinskaya from "./Components/author/AlexandraRybinskaya.tsx";
 import JennyWilson from "./Components/author/JennyWilson.tsx";
 import LeslieAlexander from "./Components/author/LeslieAlexander.tsx";
-import BlogPostStartup from "./Components/BlogPost/BlogPostStartup.tsx";
-import BlogPostBusiness from "./Components/BlogPost/BlogPostBusiness.tsx";
+import BlogContent from "./Components/BlogPost/BlogContent.tsx";
 function App() {
   return (
     <>
@@ -20,11 +19,10 @@ function App() {
           <Route path="/blog" element={<Blog />}></Route>
           <Route path="/aboutus" element={<AboutUs />}></Route>
           <Route path="/contactus" element={<ContactUs />}></Route>
-          <Route path="/blogPostStartup" element={<BlogPostStartup />}></Route>
-          <Route
-            path="/blogPostBusiness"
-            element={<BlogPostBusiness />}
-          ></Route>
+
+          {/*it's a dynamic routing, no need to change anything here*/}
+          <Route path="/blog/:id/:title" element={<BlogContent />}></Route>
+
           <Route path="/privacyPolice" element={<PrivacyPolice />}></Route>
           <Route path="/contactUs" element={<ContactUs />}></Route>
           <Route path="/aboutUs" element={<AboutUs />}></Route>
