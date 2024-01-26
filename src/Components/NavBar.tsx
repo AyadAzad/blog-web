@@ -3,11 +3,10 @@ import { RouteName, generateRoutePath, showInMenuRoutes } from "../App/routes";
 
 const NavBar = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="bg-light border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to={generateRoutePath({ name: RouteName.Home })}
