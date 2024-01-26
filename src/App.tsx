@@ -20,7 +20,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />}></Route>
           <Route path="/contactus" element={<ContactUs />}></Route>
 
-          {/*it's a dynamic routing, no need to change anything here*/}
+          {/*  it's a dynamic routing, no need to change anything here*/}
           <Route path="/blog/:id/:title" element={<BlogContent />}></Route>
 
           <Route path="/privacyPolice" element={<PrivacyPolice />}></Route>
