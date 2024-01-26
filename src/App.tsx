@@ -10,6 +10,8 @@ import AlexandraRybinskaya from "./Components/author/AlexandraRybinskaya.tsx";
 import JennyWilson from "./Components/author/JennyWilson.tsx";
 import LeslieAlexander from "./Components/author/LeslieAlexander.tsx";
 import BlogContent from "./Components/BlogPost/BlogContent.tsx";
+import Technology from "./Components/BlogCatagory/Technology.tsx";
+import Business from "./Components/BlogCatagory/Business.tsx"
 function App() {
   return (
     <>
@@ -22,6 +24,9 @@ function App() {
 
           {/*it's a dynamic routing, no need to change anything here*/}
           <Route path="/blog/:id/:title" element={<BlogContent />}></Route>
+
+          <Route path="/Technology" element={<Technology />}></Route>
+          <Route path="/Business" element={<Business />}></Route>
 
           <Route path="/privacyPolice" element={<PrivacyPolice />}></Route>
           <Route path="/contactUs" element={<ContactUs />}></Route>

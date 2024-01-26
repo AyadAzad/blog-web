@@ -11,7 +11,7 @@ const ChooseCategory = () => {
       </p>
       <div className="flex flex-col sm:flex-row pb-4 sm:pb-20 w-full sm:w-10/12 ml-4 sm:ml-32">
         <div className="border-2 border-solid border-slate-300 mx-5 my-5 px-4 pt-4 sm:hover:bg-amber-300">
-          <a href="/blogPostBusiness">
+          <a href="/Business">
             <img src={business} alt="Business"></img>
             <p className="pt-2 pb-5 font-bold text-lg sm:text-2xl">Business</p>
             <p className="text-slate-500 pb-4 sm:pb-11">
@@ -36,11 +36,13 @@ const ChooseCategory = () => {
           </p>
         </div>
         <div className="border-2 border-solid border-slate-300 mx-5 my-5 px-4 pt-4 sm:hover:bg-amber-300">
+        <a href="/Technology">
           <img src={technoogy} alt="Technology"></img>
           <p className="pt-2 pb-5 font-bold text-lg sm:text-2xl">Technology</p>
           <p className="text-slate-500 pb-4 sm:pb-11">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
+        </a>
         </div>
       </div>
     </>

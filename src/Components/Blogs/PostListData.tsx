@@ -4,7 +4,7 @@ const PostListData = [
     {
         id:1,
         picture:womanInfront,
-        catagory:"StartUp",
+        catagory:"Technology",
         title:"How to create a React project",
         // we had this error before, make sure the file path starts with a '/'
         // otherwise it doesn't work
@@ -16,7 +16,7 @@ const PostListData = [
     {
         id:2,
         picture:peopleWalking,
-        catagory:"Bussiness",
+        catagory:"Business",
         title:"How to run your own bussiness",
         contentPath:'/src/Components/MarkdownBlogs/HowToOpenYourOwnBusiness.md',
         text:" Duis aute irure dolor in reprehenderit in voluptate velit esse\n" +
