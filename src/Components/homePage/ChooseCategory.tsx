@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { generateRoutePath } from "../../App/routes";
 import { RouteName } from "../../App/routes";
 import PostListData from "../Blogs/PostListData";
-import economy from "../../assets/economy.png";
-import technoogy from "../../assets/technology.png";
 
 const ChooseCategory = () => {
   return (
@@ -30,21 +28,6 @@ const ChooseCategory = () => {
             </Link>
           </div>
         ))}
-        {/* the code below this comment should be added as an object to the array PostListData  */}
-        <div className="border-2 border-solid border-slate-300 mx-5 my-5 px-4 pt-4 sm:hover:bg-amber-300">
-          <img src={economy} alt="Economy"></img>
-          <p className="pt-2 pb-5 font-bold text-lg sm:text-2xl">Economy</p>
-          <p className="text-slate-500 pb-4 sm:pb-11">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </div>
-        <div className="border-2 border-solid border-slate-300 mx-5 my-5 px-4 pt-4 sm:hover:bg-amber-300">
-          <img src={technoogy} alt="Startup"></img>
-          <p className="pt-2 pb-5 font-bold text-lg sm:text-2xl">Technology</p>
-          <p className="text-slate-500 pb-4 sm:pb-11">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </div>
       </div>
     </>
   );
