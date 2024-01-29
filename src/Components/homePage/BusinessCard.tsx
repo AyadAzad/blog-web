@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { RouteName, generateRoutePath } from "../../App/routes";
+
 const BusinessCard = () => {
   return (
     <>
@@ -12,9 +15,11 @@ const BusinessCard = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <button className="font-bold pb-2 text-violet-700 ">
-            Read More &#62;
-          </button>
+          <Link to={generateRoutePath({ name: RouteName.AboutUs })}>
+            <button className="font-bold pb-2 text-violet-700 ">
+              Read More &#62;
+            </button>
+          </Link>
         </div>
         <div className="w-full sm:w-2/4 pr-4 sm:pr-20">
           <p className="font-bold text-base pb-4 sm:pb-9">OUR MISSION</p>

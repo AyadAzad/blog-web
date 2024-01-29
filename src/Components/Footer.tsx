@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { footerRoutes, generateRoutePath } from "../App/routes";
+import { RouteName, footerRoutes, generateRoutePath } from "../App/routes";
 
 const Footer = () => {
   return (
@@ -8,7 +8,10 @@ const Footer = () => {
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-              <a href="/" className="flex items-center">
+              <Link
+                to={generateRoutePath({ name: RouteName.Home })}
+                className="flex items-center"
+              >
                 <svg
                   id="logo-38"
                   width="78"
@@ -36,7 +39,7 @@ const Footer = () => {
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                   InsightBlog
                 </span>
-              </a>
+              </Link>
             </div>
 
             <div>

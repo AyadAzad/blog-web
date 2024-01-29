@@ -23,6 +23,7 @@ const ListOfAuthers = () => {
       <div className="flex flex-col md:flex-row pb-10 md:pb-20 w-full md:w-10/12 mx-auto">
         {authors.map((author) => (
           <div
+            key={author.key}
             className={
               author.key === RouteName.AlexandraRybinskaya
                 ? "bg-slate-200 mx-auto my-5 md:my-0 md:mx-5 md:px-0 px-10 pt-10 hover:bg-amber-100 md:w-72"

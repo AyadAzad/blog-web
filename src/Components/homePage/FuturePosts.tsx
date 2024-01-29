@@ -1,6 +1,13 @@
-import whiteHouse from "../../assets/whiteHouse.png";
+import { Link } from "react-router-dom";
+import PostListData from "../Blogs/PostListData";
+import { generateRoutePath } from "../../App/routes";
+import { RouteName } from "../../App/routes";
 
 const FuturePosts = () => {
+  const technologyPost = PostListData.find(
+    (post) => post.catagory === "Technology"
+  );
+
   return (
     <div className="pt-8 sm:pt-32 flex flex-col sm:flex-row px-4 sm:px-32 pb-4 sm:pb-20">
       <div className="mb-8 sm:mb-0">
@@ -10,7 +17,7 @@ const FuturePosts = () => {
         <div>
           <img
             className="w-full sm:w-3/4 pb-4 sm:pb-11 cursor-pointer"
-            src={whiteHouse}
+            src={technologyPost?.picture}
             alt="Featured Post"
           />
           <p className="pb-4 sm:pb-11 text-base">
@@ -18,60 +25,45 @@ const FuturePosts = () => {
             2022
           </p>
           <p className="pb-4 sm:pb-11 font-bold text-xl sm:text-3xl w-full sm:w-3/4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-            sunt animi, magnam quis eos, error itaque, dolores!
+            {technologyPost?.title}
           </p>
-          <p className="pb-4 sm:pb-11 text-base w-full sm:w-2/4">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident.
+          <p className="pb-4 sm:pb-11 text-xl sm:text-1xl w-full sm:w-3/4">
+            React JS has become one of the most popular JavaScript libraries for
+            building user interfaces. Its component-based architecture and
+            efficient data binding make it a go-to choice for developers when
+            creating modern web applications.
           </p>
-          <button className="font-bold pb-2 bg-amber-300 text-black w-full sm:w-52 h-14 cursor-pointer">
-            Read More &#62;
-          </button>
+          <Link
+            to={`${generateRoutePath({ name: RouteName.Blog })}/${
+              technologyPost?.path
+            }`}
+          >
+            <button className="font-bold pb-2 bg-amber-300 text-black w-full sm:w-52 h-14 cursor-pointer">
+              Read More &#62;
+            </button>
+          </Link>
         </div>
       </div>
       <div>
         <p className="text-xl sm:text-2xl font-bold pb-4 sm:pb-11">All post</p>
         <div className=" text-base">
-          <div className="mb-4 sm:mb-20 px-2.5 py-2.5 hover:bg-amber-100">
-            <p>
-              By <strong className="text-indigo-700">John Deo </strong>| May 23,
-              2022
-            </p>
-            <p className="text-xl sm:text-2xl font-bold">
-              <a href="/blog">
-                8 Figma design systems that you can download for free today.
-              </a>
-            </p>
-          </div>
-          <div className="mb-4 sm:mb-20 px-2.5 py-2.5 hover:bg-amber-100">
-            <p>
-              By <strong className="text-indigo-700">John Deo</strong>| May 23,
-              2022
-            </p>
-            <p className="text-xl sm:text-2xl font-bold">
-              8 Figma design systems that you can download for free today.
-            </p>
-          </div>
-          <div className="mb-4 sm:mb-20 px-2.5 py-2.5 hover:bg-amber-100">
-            <p>
-              By <strong className="text-indigo-700">John Deo</strong>| May 23,
-              2022
-            </p>
-            <p className="text-xl sm:text-2xl font-bold">
-              8 Figma design systems that you can download for free today.
-            </p>
-          </div>
-          <div className="px-2.5 py-2.5 hover:bg-amber-100">
-            <p>
-              By <strong className="text-indigo-700">John Deo</strong>| May 23,
-              2022
-            </p>
-            <p className="text-xl sm:text-2xl font-bold">
-              8 Figma design systems that you can download for free today.
-            </p>
-          </div>
+          {PostListData.map((item) => (
+            <div key={item.path} className="mb-4 sm:mb-20 hover:bg-amber-100">
+              <p>
+                By <strong className="text-indigo-700">John Deo </strong>| May
+                23, 2022
+              </p>
+              <p className="text-xl sm:text-2xl font-bold">
+                <Link
+                  to={`${generateRoutePath({ name: RouteName.Blog })}/${
+                    item.path
+                  }`}
+                >
+                  {item.title}
+                </Link>
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

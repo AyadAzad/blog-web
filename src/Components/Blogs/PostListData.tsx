@@ -59,4 +59,5 @@ const PostListData = [
       "                cupidatat non proident.",
   },
 ];
+
 export default PostListData;
