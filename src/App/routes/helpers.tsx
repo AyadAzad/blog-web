@@ -10,6 +10,10 @@ import AyadAzad from "../../Components/author/AyadAzad";
 import AlexandraRybinskaya from "../../Components/author/AlexandraRybinskaya";
 import JennyWilson from "../../Components/author/JennyWilson";
 import LeslieAlexander from "../../Components/author/LeslieAlexander";
+import Business from "../../Components/BlogCatagory/Business";
+import Economy from "../../Components/BlogCatagory/Economy";
+import Startup from "../../Components/BlogCatagory/Startup";
+import Technology from "../../Components/BlogCatagory/Technology";
 
 export const containerPaths: { [key in Containers]: string } = {
   [RouteName.Home]: "/home",
@@ -22,6 +26,10 @@ export const containerPaths: { [key in Containers]: string } = {
   [RouteName.AlexandraRybinskaya]: "/AlexandraRybinskaya",
   [RouteName.JennyWilson]: "/JennyWilson",
   [RouteName.LeslieAlexander]: "/LeslieAlexander",
+  [RouteName.Business]: "/Business",
+  [RouteName.Economy]: "/Business",
+  [RouteName.Startup]: "/Business",
+  [RouteName.Technology]: "/Business",
 };
 
 const routes: Record<RouteName, RouteConfig> = {
@@ -94,6 +102,34 @@ const routes: Record<RouteName, RouteConfig> = {
     component: LeslieAlexander,
     isAuthor: true,
   },
+  [RouteName.Business]: {
+    label: "Business",
+    path: "/business",
+    key: RouteName.Business,
+    component: Business,
+    showInChooseCategory: true,
+  },
+  [RouteName.Economy]: {
+    label: "Economy",
+    path: "/economy",
+    key: RouteName.Economy,
+    component: Economy,
+    showInChooseCategory: true,
+  },
+  [RouteName.Startup]: {
+    label: "Startup",
+    path: "/startup",
+    key: RouteName.Startup,
+    component: Startup,
+    showInChooseCategory: true,
+  },
+  [RouteName.Technology]: {
+    label: "Technology",
+    path: "/technology",
+    key: RouteName.Technology,
+    component: Technology,
+    showInChooseCategory: true,
+  },
 };
 
 export const allRoutes = Object.values(routes);
@@ -105,6 +141,10 @@ export const footerRoutes = allRoutes.filter(
 );
 
 export const authors = allRoutes.filter((route) => route.isAuthor);
+
+export const chooseCategory = allRoutes.filter(
+  (route) => route.showInChooseCategory
+);
 
 export function useGotoRoute(
   name: RouteName

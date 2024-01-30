@@ -8,6 +8,7 @@ export interface RouteConfig {
   showInMenu?: boolean;
   showInFooter?: boolean;
   isAuthor?: boolean;
+  showInChooseCategory?: boolean;
 }
 
 export enum RouteName {
@@ -21,6 +22,10 @@ export enum RouteName {
   AlexandraRybinskaya = "AlexandraRybinskaya",
   JennyWilson = "JennyWilson",
   LeslieAlexander = "LeslieAlexander",
+  Business = "Business",
+  Economy = "Economy",
+  Startup = "Startup",
+  Technology = "Technology",
 }
 
 export type Containers =
@@ -33,4 +38,8 @@ export type Containers =
   | RouteName.AyadAzad
   | RouteName.AlexandraRybinskaya
   | RouteName.JennyWilson
-  | RouteName.LeslieAlexander;
+  | RouteName.LeslieAlexander
+  | RouteName.Business
+  | RouteName.Economy
+  | RouteName.Startup
+  | RouteName.Technology;

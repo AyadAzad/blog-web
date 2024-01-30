@@ -3,7 +3,7 @@ import NavBar from "../NavBar.tsx";
 import FilterPosts from "./FilterPosts.tsx";
 import Footer from "../Footer.tsx";
 
-const Business = () => {
+const Economy = () => {
   const economyPosts = PostListData.filter(
     (post) => post.catagory === "Economy"
   );
@@ -16,4 +16,4 @@ const Business = () => {
     </>
   );
 };
-export default Business;
+export default Economy;

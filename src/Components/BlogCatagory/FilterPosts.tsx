@@ -15,7 +15,10 @@ const FilterPosts = ({ posts, title }: TypeProps) => {
       </div>
       <div className="bg-zinc-500 self-stretch shrink-0 h-px mt-9 max-md:max-w-full" />
       {posts.map((post) => (
-        <div className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
+        <div
+          key={post.path}
+          className="self-stretch mt-16 max-md:max-w-full max-md:mt-10"
+        >
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
               <div className="flex grow flex-col items-stretch max-md:max-w-full max-md:mt-8">
@@ -33,7 +36,6 @@ const FilterPosts = ({ posts, title }: TypeProps) => {
                 </Link>
               </div>
             </div>
-
             <div className="flex flex-col items-stretch w-[56%] ml-5 max-md:w-full max-md:ml-0">
               <span className="flex flex-col items-stretch my-auto max-md:max-w-full max-md:mt-10">
                 <div className="text-violet-800 text-base font-semibold leading-5 tracking-[3px] uppercase max-md:max-w-full">

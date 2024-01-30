@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
 import PostListData from "./PostListData.tsx";
+import { RouteName, generateRoutePath } from "../../App/index.ts";
+
 const AllPosts = () => {
   return (
     <div className="flex w-full flex-col mt-20 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
@@ -6,7 +9,6 @@ const AllPosts = () => {
         All posts
       </div>
       <div className="bg-zinc-500 self-stretch shrink-0 h-px mt-9 max-md:max-w-full" />
-
       {PostListData.map((post) => (
         <div
           key={post.path}
@@ -15,14 +17,18 @@ const AllPosts = () => {
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
               <div className="flex grow flex-col items-stretch max-md:max-w-full max-md:mt-8">
-                <a href={`/blog/${post.path}`}>
+                <Link
+                  to={`${generateRoutePath({ name: RouteName.Blog })}/${
+                    post.path
+                  }`}
+                >
                   <img
                     loading="lazy"
                     srcSet={post.picture}
                     className="aspect-[1.73] object-contain object-center w-full overflow-hidden max-md:max-w-full max-sm:max-w-full"
                     alt={`Post ${post.title}`}
                   />
-                </a>
+                </Link>
               </div>
             </div>
 

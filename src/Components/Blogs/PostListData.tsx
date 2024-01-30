@@ -3,6 +3,8 @@ import womanInfront from "../../assets/two-women-in-front-of-dry-erase-board-118
 import business from "../../assets/bussiness.png";
 import economy from "../../assets/economy.png";
 import technoogy from "../../assets/technology.png";
+import photoOfPeople from "../../assets/photoOfPeople.png";
+import photoOfWomen from "../../assets/photo-of-woman-looking-at-man-3183173.png";
 
 const PostListData = [
   {
@@ -22,9 +24,9 @@ const PostListData = [
 
   {
     path: "How-to-run-your-own-bussiness",
-    picture: peopleWalking,
+    picture: photoOfPeople,
     icon: business,
-    catagory: "Bussiness",
+    catagory: "Business",
     title: "How to run your own bussiness",
     contentPath: "/src/Components/MarkdownBlogs/HowToOpenYourOwnBusiness.md",
     text:
@@ -48,7 +50,7 @@ const PostListData = [
   },
   {
     path: "Startup:The-Art-of-Starting-and-the-Path-to-Success",
-    picture: peopleWalking,
+    picture: photoOfWomen,
     icon: technoogy,
     catagory: "Startup",
     title: "Startup: The Art of Starting and the Path to Success",
