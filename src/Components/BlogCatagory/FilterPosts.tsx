@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { generateRoutePath } from "../../App/routes";
+import { RouteName } from "../../App/routes";
+
 type TypeProps = {
   posts: { [k: string]: string }[];
   title: string;
@@ -16,14 +20,18 @@ const FilterPosts = ({ posts, title }: TypeProps) => {
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
               <div className="flex grow flex-col items-stretch max-md:max-w-full max-md:mt-8">
-                <a href={`/blog/${post.path}`}>
+                <Link
+                  to={`${generateRoutePath({ name: RouteName.Blog })}/${
+                    post.path
+                  }`}
+                >
                   <img
                     loading="lazy"
                     srcSet={post.picture}
                     className="aspect-[1.73] object-contain object-center w-full overflow-hidden max-md:max-w-full max-sm:max-w-full"
                     alt={`${post.path}`}
                   />
-                </a>
+                </Link>
               </div>
             </div>
 
