@@ -14,7 +14,6 @@ const FilterPosts = ({ posts, title }: TypeProps) => {
         {title}
       </div>
       <div className="bg-zinc-500 self-stretch shrink-0 h-px mt-9 max-md:max-w-full" />
-
       {posts.map((post) => (
         <div className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
           <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
