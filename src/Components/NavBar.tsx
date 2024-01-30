@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { RouteName, generateRoutePath, showInMenuRoutes } from "../App/routes";
 import { useState } from "react";
-
+import SearchBar from "./SearchBar.tsx";
 const NavBar = () => {
   const { pathname } = useLocation();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -54,6 +54,8 @@ const NavBar = () => {
             aria-expanded="false"
             onClick={handleMobileMenuToggle}
           >
+
+
             <span className="sr-only">Open main menu</span>
             <svg
               className="w-5 h-5"
@@ -71,6 +73,9 @@ const NavBar = () => {
               />
             </svg>
           </button>
+          <span className="w-1/2">
+              <SearchBar/>
+            </span>
           <div
             className={`${
               isMobileMenuOpen ? "block" : "hidden"
