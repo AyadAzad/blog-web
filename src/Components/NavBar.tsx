@@ -73,7 +73,7 @@ const NavBar = () => {
               />
             </svg>
           </button>
-          <span className="w-1/2">
+          <span className="w-1/2 max-sm:mt-5 max-sm:w-screen">
               <SearchBar/>
             </span>
           <div

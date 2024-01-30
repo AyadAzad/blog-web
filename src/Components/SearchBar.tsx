@@ -1,10 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
-import PostListData from "./Blogs/PostListData.tsx";
+import { useState, useRef, useEffect, ChangeEvent } from "react";
+import PostListData from "./Blogs/PostListData";
+import { RouteName, generateRoutePath } from "../App/index.ts";
+import {Link} from "react-router-dom";
+interface Post {
+    title: string;
+    path: string;
+}
 
 const SearchBar = () => {
-    const [searchQuery, setSearchQuery] = useState("");
-    const [searchResults, setSearchResults] = useState([]);
-    const listRef = useRef(null);
+    const [searchQuery, setSearchQuery] = useState<string>("");
+    const [searchResults, setSearchResults] = useState<Post[]>([]);
+    const listRef = useRef<HTMLUListElement>(null);
 
     useEffect(() => {
         document.addEventListener("click", handleClickOutside);
@@ -13,13 +19,14 @@ const SearchBar = () => {
         };
     }, []);
 
-    const handleClickOutside = (event) => {
-        if (listRef.current && !listRef.current.contains(event.target)) {
+    // When clicking outside the list box, hide the box
+    const handleClickOutside = (event: MouseEvent) => {
+        if (listRef.current && !listRef.current.contains(event.target as Node)) {
             setSearchResults([]);
         }
     };
 
-    const handleSearchChange = (e) => {
+    const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
         const query = e.target.value;
         setSearchQuery(query);
         // Filter the PostListData based on the search query
@@ -30,7 +37,7 @@ const SearchBar = () => {
     };
 
     return (
-        <div>
+        <div >
             <form>
                 <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
                     Search
@@ -61,17 +68,25 @@ const SearchBar = () => {
                         value={searchQuery}
                         onChange={handleSearchChange}
                         required
+                        role="combobox"
                     />
-            {/* Render the dropdown list with search results */}
-            {searchResults.length > 0 && (
-                <ul ref={listRef} className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
-                    {searchResults.map((result) => (
-                        <li key={result.path} className="px-4 py-2 hover:bg-gray-100">
-                            {result.title}
-                        </li>
-                    ))}
-                </ul>
-            )}
+                    {/* Render the dropdown list with search results */}
+                    {searchResults.length > 0 && (
+                        <ul ref={listRef} className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
+                            {searchResults.map((result) => (
+                                // go the blogs using the pre-defined routes in the App Folder
+                                <Link
+                                    to={`${generateRoutePath({ name: RouteName.Blog })}/${
+                                        result.path
+                                    }`}
+                                >
+                                <li key={result.path} className="px-4 py-2 hover:bg-gray-100">
+                                    {result.title}
+                                </li>
+                                </Link>
+                            ))}
+                        </ul>
+                    )}
                 </div>
             </form>
         </div>
