@@ -1,13 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
 import { RouteName, generateRoutePath, showInMenuRoutes } from "../App/routes";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import SearchBar from "./SearchBar.tsx";
+
 const NavBar = () => {
+  const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
   };
 
   return (
@@ -54,8 +60,6 @@ const NavBar = () => {
             aria-expanded="false"
             onClick={handleMobileMenuToggle}
           >
-
-
             <span className="sr-only">Open main menu</span>
             <svg
               className="w-5 h-5"
@@ -74,8 +78,8 @@ const NavBar = () => {
             </svg>
           </button>
           <span className="w-1/2 max-sm:mt-5 max-sm:w-screen">
-              <SearchBar/>
-            </span>
+            <SearchBar />
+          </span>
           <div
             className={`${
               isMobileMenuOpen ? "block" : "hidden"
@@ -93,11 +97,26 @@ const NavBar = () => {
                         : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                     }
                   >
-                    {route.label}
+                    {t(`routes.${route.label}`)}
                   </Link>
                 </li>
               ))}
             </ul>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => changeLanguage("en")}
+                className="text-sm cursor-pointer"
+              >
+                ENG
+              </button>
+              <span>|</span>
+              <button
+                onClick={() => changeLanguage("ru")}
+                className="text-sm cursor-pointer"
+              >
+                RUS
+              </button>
+            </div>
           </div>
         </div>
       </nav>

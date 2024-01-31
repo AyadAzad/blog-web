@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { RouteName, footerRoutes, generateRoutePath } from "../App/routes";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <>
       <footer className="bg-white dark:bg-gray-900">
@@ -48,7 +50,7 @@ const Footer = () => {
                   {footerRoutes.map((route) => (
                     <li key={route.key} className="px-2 hover:text-amber-400">
                       <Link to={generateRoutePath({ name: route.key })}>
-                        {route.label}
+                        {t(`routes.${route.label}`)}
                       </Link>
                     </li>
                   ))}
