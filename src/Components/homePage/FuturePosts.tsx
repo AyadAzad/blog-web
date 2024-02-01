@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import PostListData from "../Blogs/PostListData";
 import { generateRoutePath } from "../../App/routes";
 import { RouteName } from "../../App/routes";
 
 const FuturePosts = () => {
+  const { t } = useTranslation();
+
   const technologyPost = PostListData.find(
     (post) => post.catagory === "Technology"
   );
@@ -12,7 +15,7 @@ const FuturePosts = () => {
     <div className="pt-8 sm:pt-32 flex flex-col sm:flex-row px-4 sm:px-32 pb-4 sm:pb-20">
       <div className="mb-8 sm:mb-0">
         <p className="text-xl sm:text-3xl font-bold pb-4 sm:pb-11">
-          Featured post
+          {t("Featured post")}
         </p>
         <div>
           <img
@@ -39,13 +42,15 @@ const FuturePosts = () => {
             }`}
           >
             <button className="font-bold pb-2 bg-amber-300 text-black w-full sm:w-52 h-14 cursor-pointer">
-              Read More &#62;
+              {t("Read More")} &#62;
             </button>
           </Link>
         </div>
       </div>
       <div>
-        <p className="text-xl sm:text-2xl font-bold pb-4 sm:pb-11">All post</p>
+        <p className="text-xl sm:text-2xl font-bold pb-4 sm:pb-11">
+          {t("All posts")}
+        </p>
         <div className=" text-base">
           {PostListData.map((item) => (
             <div key={item.path} className="mb-4 sm:mb-20 hover:bg-amber-100">

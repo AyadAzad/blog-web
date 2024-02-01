@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { RouteName, authors, generateRoutePath } from "../../App/routes";
 import Ayad_Azad from "../../assets/Ayad_Azad.png";
 import Alexandra_Rybinskaya from "../../assets/Alexandra_Rybinskaya.jpg";
@@ -8,6 +9,8 @@ import logoComponents from "../../assets/LogoComponent.png";
 import { Link } from "react-router-dom";
 
 const ListOfAuthers = () => {
+  const { t } = useTranslation();
+
   const picturesAuthors: Record<string, { img: string }> = {
     [RouteName.AyadAzad]: { img: Ayad_Azad },
     [RouteName.AlexandraRybinskaya]: { img: Alexandra_Rybinskaya },
@@ -18,7 +21,7 @@ const ListOfAuthers = () => {
   return (
     <>
       <p className="pb-6 md:pb-11 font-bold text-xl md:text-3xl text-center pt-10 md:pt-20">
-        List of Authors
+        {t("List of Authors")}
       </p>
       <div className="flex flex-col md:flex-row pb-10 md:pb-20 w-full md:w-10/12 mx-auto">
         {authors.map((author) => (

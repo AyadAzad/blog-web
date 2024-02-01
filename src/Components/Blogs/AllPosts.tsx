@@ -1,12 +1,15 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import PostListData from "./PostListData.tsx";
 import { RouteName, generateRoutePath } from "../../App/index.ts";
 
 const AllPosts = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex w-full flex-col mt-20 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
       <div className="text-gray-800 text-5xl font-bold leading-[63.84px] tracking-tighter self-stretch max-md:max-w-full max-md:text-4xl">
-        All posts
+        {t("All posts")}
       </div>
       <div className="bg-zinc-500 self-stretch shrink-0 h-px mt-9 max-md:max-w-full" />
       {PostListData.map((post) => (
@@ -50,7 +53,7 @@ const AllPosts = () => {
       ))}
       <div className="self-center flex justify-between gap-5 mt-20 items-start max-md:mt-10">
         <div className="text-zinc-500 text-center text-2xl font-bold leading-8">
-          &lt; Prev{" "}
+          &lt; Prev
         </div>
         <div className="text-gray-800 text-center text-3xl font-bold leading-10 tracking-tighter self-stretch">
           Next &gt;

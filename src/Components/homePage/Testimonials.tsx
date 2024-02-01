@@ -1,20 +1,20 @@
+import { useTranslation } from "react-i18next";
 import profilePicture from "../../assets/ProfilePicture.png";
 import arrow from "../../assets/arrow.png";
 import arrow2 from "../../assets/arrrow2.png";
 
 const Testimonials = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="mt-10 md:mt-20 pl-6 md:ml-32 w-full md:w-10/12 bg-amber-50 grid grid-cols-1 md:grid-cols-2 divide-x-2 py-16">
         <div className="w-full md:pl-32 md:pr-40">
-          <p className="text-1xl font-medium pb-5">TESTIMONIALS</p>
+          <p className="text-1xl font-medium pb-5">{t("TESTIMONIALS")}</p>
           <p className="pb-5 font-bold text-4xl">
-            What people say about our blog
+            {t("What people say about our blog")}
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor.
-          </p>
+          <p>{t("Here you can read the reviews of our users.")}</p>
         </div>
 
         <div className="w-full md:pl-14 md:pr-40 flex flex-col justify-center items-start gap-16 md:gap-32">

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { chooseCategory, generateRoutePath } from "../../App/routes";
 import { RouteName } from "../../App/routes/";
@@ -6,6 +7,8 @@ import economy from "../../assets/economy.png";
 import technoogy from "../../assets/technology.png";
 
 const ChooseCategory = () => {
+  const { t } = useTranslation();
+
   const iconChooseCategory: Record<string, { img: string }> = {
     [RouteName.Business]: { img: business },
     [RouteName.Startup]: { img: technoogy },
@@ -15,7 +18,7 @@ const ChooseCategory = () => {
   return (
     <>
       <p className="pb-6 sm:pb-11 font-bold text-xl sm:text-3xl pt-4 sm:pt-32 text-center">
-        Choose A Category
+        {t("Choose A Category")}
       </p>
       <div className="flex flex-col sm:flex-row pb-4 sm:pb-20 w-full sm:w-10/12 ml-4 sm:ml-32">
         {chooseCategory.map((item) => (

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import menWithComputer from "../../assets/menWithComputer.png";
 import BusinessCard from "./BusinessCard";
 import ChooseCategory from "./ChooseCategory";
@@ -10,6 +11,8 @@ import NavBar from "../NavBar.tsx";
 import Footer from "../Footer.tsx";
 
 const HomePage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <NavBar />
@@ -36,7 +39,7 @@ const HomePage = () => {
             cupidatat non proident.
           </p>
           <button className="font-bold pb-2 bg-amber-300 text-black w-1/4 h-14">
-            Read More &#62;
+            {t("Read More")} &#62;
           </button>
         </div>
       </div>

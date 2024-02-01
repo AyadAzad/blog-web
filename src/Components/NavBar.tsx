@@ -3,6 +3,8 @@ import { RouteName, generateRoutePath, showInMenuRoutes } from "../App/routes";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import SearchBar from "./SearchBar.tsx";
+import iconRUS from "../assets/icons8-флаг-россии-48.png";
+import iconUSA from "../assets/icons8-флаг-сша-48.png";
 
 const NavBar = () => {
   const { t, i18n } = useTranslation();
@@ -19,7 +21,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="bg-light border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 ">
           <Link
             to={generateRoutePath({ name: RouteName.Home })}
             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -77,7 +79,7 @@ const NavBar = () => {
               />
             </svg>
           </button>
-          <span className="w-1/2 max-sm:mt-5 max-sm:w-screen">
+          <span className="w-1/2 max-sm:mt-5 max-sm:w-screen p-2">
             <SearchBar />
           </span>
           <div
@@ -101,22 +103,21 @@ const NavBar = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className="cursor-pointer w-8 h-8"
+                >
+                  <img src={iconUSA}></img>
+                </button>
+                <button
+                  onClick={() => changeLanguage("ru")}
+                  className="cursor-pointer w-8 h-8"
+                >
+                  <img src={iconRUS}></img>
+                </button>
+              </li>
             </ul>
-            <div className="flex items-center space-x-2">
-              <button
-                onClick={() => changeLanguage("en")}
-                className="text-sm cursor-pointer"
-              >
-                ENG
-              </button>
-              <span>|</span>
-              <button
-                onClick={() => changeLanguage("ru")}
-                className="text-sm cursor-pointer"
-              >
-                RUS
-              </button>
-            </div>
           </div>
         </div>
       </nav>
