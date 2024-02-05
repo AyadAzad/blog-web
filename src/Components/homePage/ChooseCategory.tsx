@@ -32,7 +32,7 @@ const ChooseCategory = () => {
                 alt={item.label}
               ></img>
               <p className="pt-2 pb-5 font-bold text-lg sm:text-2xl">
-                {item.label}
+                {t(item.label)}
               </p>
               <p className="text-slate-500 pb-4 sm:pb-11">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

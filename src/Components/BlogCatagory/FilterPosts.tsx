@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { generateRoutePath } from "../../App/routes";
 import { RouteName } from "../../App/routes";
@@ -8,6 +9,8 @@ type TypeProps = {
 };
 
 const FilterPosts = ({ posts, title }: TypeProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex w-full flex-col mt-20 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
       <div className="text-gray-800 text-5xl font-bold leading-[63.84px] tracking-tighter self-stretch max-md:max-w-full max-md:text-4xl">
@@ -39,7 +42,7 @@ const FilterPosts = ({ posts, title }: TypeProps) => {
             <div className="flex flex-col items-stretch w-[56%] ml-5 max-md:w-full max-md:ml-0">
               <span className="flex flex-col items-stretch my-auto max-md:max-w-full max-md:mt-10">
                 <div className="text-violet-800 text-base font-semibold leading-5 tracking-[3px] uppercase max-md:max-w-full">
-                  {post.catagory}
+                  {t(post.catagory)}
                 </div>
                 <div className="text-gray-800 text-4xl font-bold leading-10 tracking-tighter mt-8 max-md:max-w-full">
                   {post.title}

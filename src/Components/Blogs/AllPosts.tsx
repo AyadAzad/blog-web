@@ -6,13 +6,18 @@ import { RouteName, generateRoutePath } from "../../App/index.ts";
 const AllPosts = () => {
   const { t } = useTranslation();
 
+  const localizedPostList = PostListData.map((post) => ({
+    ...post,
+    catagory: t(post.catagory),
+  }));
+
   return (
     <div className="flex w-full flex-col mt-20 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
       <div className="text-gray-800 text-5xl font-bold leading-[63.84px] tracking-tighter self-stretch max-md:max-w-full max-md:text-4xl">
         {t("All posts")}
       </div>
       <div className="bg-zinc-500 self-stretch shrink-0 h-px mt-9 max-md:max-w-full" />
-      {PostListData.map((post) => (
+      {localizedPostList.map((post) => (
         <div
           key={post.path}
           className="self-stretch mt-16 max-md:max-w-full max-md:mt-10"
@@ -34,7 +39,6 @@ const AllPosts = () => {
                 </Link>
               </div>
             </div>
-
             <div className="flex flex-col items-stretch w-[56%] ml-5 max-md:w-full max-md:ml-0">
               <span className="flex flex-col items-stretch my-auto max-md:max-w-full max-md:mt-10">
                 <div className="text-violet-800 text-base font-semibold leading-5 tracking-[3px] uppercase max-md:max-w-full">

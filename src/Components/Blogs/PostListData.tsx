@@ -3,7 +3,7 @@ import womanInfront from "../../assets/two-women-in-front-of-dry-erase-board-118
 import business from "../../assets/bussiness.png";
 import economy from "../../assets/economy.png";
 import technoogy from "../../assets/technology.png";
-import photoOfPeople from "../../assets/photoOfPeople.png";
+import photoOfPeople from "../../assets/photo-of-people-doing-handshakes-3183197.png";
 import photoOfWomen from "../../assets/photo-of-woman-looking-at-man-3183173.png";
 
 const PostListData = [

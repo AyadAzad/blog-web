@@ -1,8 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import PostListData from "../Blogs/PostListData.tsx";
 import NavBar from "../NavBar.tsx";
 import profilePicture from "../../assets/ProfilePicture.png";
-import startap from "../../assets/startap.png";
 import photoOfWomen from "../../assets/photoOfWomen.png";
 import MarkdownFileRenderer from "./MarkdownFileRenderer.tsx";
 import WhatToReadNext from "./WhatToReadNext.tsx";
@@ -10,6 +10,8 @@ import JoinNow from "../homePage/JoinNow.tsx";
 import Footer from "../Footer.tsx";
 
 const BlogContent = () => {
+  const { t } = useTranslation();
+
   const { path } = useParams();
   const selectedPost = PostListData.find((post) => path === post.path);
 
@@ -35,8 +37,8 @@ const BlogContent = () => {
           {selectedPost.title}
         </p>
         <div className="pt-2 pb-11 px-28 flex flex-row">
-          <img className="w-7" src={startap} alt="Startap" />
-          <p className="pl-5 text-2xl">{selectedPost.catagory}</p>
+          <img className="w-7" src={selectedPost.icon} alt="Startap" />
+          <p className="pl-5 text-2xl">{t(selectedPost.catagory)}</p>
         </div>
         <div className="flex items-center justify-center">
           <img src={photoOfWomen} alt="Photo of Women" />
