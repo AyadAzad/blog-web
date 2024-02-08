@@ -1,4 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { generateRoutePath } from "../../App/routes";
+import { RouteName } from "../../App/routes";
 
 const JoinNow = () => {
   const { t } = useTranslation();
@@ -15,9 +18,11 @@ const JoinNow = () => {
               "Feel free to connect with us on social media, share your thoughts, and let's create something extraordinary together!"
             )}
           </p>
-          <button className="font-bold pb-2 bg-amber-300 text-black w-52 h-14">
-            {t("Join Now")}
-          </button>
+          <Link to={generateRoutePath({ name: RouteName.ContactUs })}>
+            <button className="font-bold pb-2 bg-amber-300 text-black w-52 h-14">
+              {t("Join Now")}
+            </button>
+          </Link>
         </div>
       </div>
     </div>

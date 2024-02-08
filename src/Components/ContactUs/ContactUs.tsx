@@ -10,15 +10,17 @@ const ContactUs = () => {
     <>
       <NavBar />
       <div className="text-center pt-32 pb-24">
-        <p className="font-bold text-1xl">{t("CONTACT US")}</p>
-        <p className="font-bold text-5xl">{t("Let’s Start a Conversation")}</p>
-        <p className="flex justify-center items-center ">
-          <p className="text-slate-500 pt-5 w-2/4">
+        <div className="font-bold text-1xl">{t("CONTACT US")}</div>
+        <div className="font-bold text-5xl">
+          {t("Let’s Start a Conversation")}
+        </div>
+        <div className="flex justify-center items-center ">
+          <div className="text-slate-500 pt-5 w-2/4">
             {t(
               "If you're a developer or a content writer and want to join us, or if you have a query or comment about the website you send us a message through this form."
             )}
-          </p>
-        </p>
+          </div>
+        </div>
       </div>
       <BusinessCard />
       <Input />

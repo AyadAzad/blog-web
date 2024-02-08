@@ -72,5 +72,8 @@
   "Startup": "Стартап",
   "TESTIMONIALS": "ОТЗЫВЫ",
   "What people say about our blog": "Что люди говорят о нашем блоге",
-  "Here you can read the reviews of our users.": "Здесь можете почитать отзывы наших пользователей"
+  "Here you can read the reviews of our users.": "Здесь можете почитать отзывы наших пользователей",
+  "Full Name is required": "Полное имя обязательно",
+  "Invalid email address": "Неверный адрес электронной почты",
+  "Email is required": "Адрес электронной почты обязательно"
 }

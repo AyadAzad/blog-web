@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
 import people from "../../assets/people.png";
+import { Link } from "react-router-dom";
+import { generateRoutePath } from "../../App/routes";
+import { RouteName } from "../../App/routes";
 
 const WhyWeStarted = () => {
   const { t } = useTranslation();
@@ -20,9 +23,11 @@ const WhyWeStarted = () => {
               "The launch of this blog was an opportunity for us to create a community of like-minded people where people from different fields of creativity can share experiences, support each other and discover amazing perspectives of the creative process together."
             )}
           </p>
-          <button className="font-bold pb-2 bg-amber-300 text-black w-52 h-14">
-            {t("Discover our story")} &#62;
-          </button>
+          <Link to={generateRoutePath({ name: RouteName.AboutUs })}>
+            <button className="font-bold pb-2 bg-amber-300 text-black w-52 h-14">
+              {t("Discover our story")} &#62;
+            </button>
+          </Link>
         </div>
       </div>
     </div>
