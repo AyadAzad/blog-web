@@ -5,12 +5,15 @@ import economy from "../../assets/economy.png";
 import technoogy from "../../assets/technology.png";
 import photoOfPeople from "../../assets/photo-of-people-doing-handshakes-3183197.png";
 import photoOfWomen from "../../assets/photo-of-woman-looking-at-man-3183173.png";
-
+import Ayad_Azad from '../../assets/Ayad_Azad.png'
+import AlexandraRybinskaya from "../../assets/Alexandra_Rybinskaya.jpg";
 const PostListData = [
   {
     path: "How-to-create-a-React-project",
+    author: "Ayad Ali",
+    author_picture:Ayad_Azad,
     picture: womanInfront,
-    icon: business,
+    icon: technoogy,
     catagory: "Technology",
     title: "How to create a React project",
     // we had this error before, make sure the file path starts with a '/'
@@ -24,6 +27,8 @@ const PostListData = [
 
   {
     path: "How-to-run-your-own-bussiness",
+    author: "Alexandra Rybinskayaa",
+    author_picture:AlexandraRybinskaya,
     picture: photoOfPeople,
     icon: business,
     catagory: "Business",
@@ -37,6 +42,8 @@ const PostListData = [
 
   {
     path: "Current-challenges-and-trends-in-the-global-economy",
+    author:"Alexandra Rybinskaya",
+    author_picture:AlexandraRybinskaya,
     picture: peopleWalking,
     icon: economy,
     catagory: "Economy",
@@ -50,6 +57,8 @@ const PostListData = [
   },
   {
     path: "Startup:The-Art-of-Starting-and-the-Path-to-Success",
+    author: "Alexandra Rybinskaya",
+    author_picture:Ayad_Azad,
     picture: photoOfWomen,
     icon: technoogy,
     catagory: "Startup",

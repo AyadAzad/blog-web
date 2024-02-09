@@ -8,7 +8,7 @@ import MarkdownFileRenderer from "./MarkdownFileRenderer.tsx";
 import WhatToReadNext from "./WhatToReadNext.tsx";
 import JoinNow from "../homePage/JoinNow.tsx";
 import Footer from "../Footer.tsx";
-
+import postListData from "../Blogs/PostListData.tsx";
 const BlogContent = () => {
   const { t } = useTranslation();
 
@@ -24,10 +24,10 @@ const BlogContent = () => {
       <div className="md:ml-auto">
         <div className="pt-20 pl-28 flex flex-row">
           <div>
-            <img src={profilePicture} alt="Profile" />
+            <img src={selectedPost.author_picture} alt="Profile" width={40} />
           </div>
           <div className="px-5">
-            <p className="text-2xl font-medium">Jonathan Vallem</p>
+            <p className="text-2xl font-medium">{selectedPost.author}</p>
             <p className="text-slate-500 text-base">
               Posted on 27th January 2022
             </p>
