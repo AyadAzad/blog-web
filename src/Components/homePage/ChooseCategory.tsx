@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { chooseCategory, generateRoutePath } from "../../App/routes";
-import { RouteName } from "../../App/routes/";
+import { RouteName } from "../../App/routes";
 import business from "../../assets/bussiness.png";
 import economy from "../../assets/economy.png";
 import technoogy from "../../assets/technology.png";
@@ -35,7 +35,7 @@ const ChooseCategory = () => {
                 {t(item.label)}
               </p>
               <p className="text-slate-500 pb-4 sm:pb-11">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                {t("Here you can read the articles of the authors")}
               </p>
             </Link>
           </div>

@@ -1,71 +1,49 @@
-import fotoOfWomenashboard from "../../assets/twoWomenInFront.png";
-import photoOfPeople from "../../assets/photoOfPeople.png";
-import photoOfWomen from "../../assets/photoOff-woman.png";
+import { useTranslation } from "react-i18next";
+import PostListData from "../Blogs/PostListData";
+import { Link } from "react-router-dom";
+import { generateRoutePath } from "../../App/routes";
+import { RouteName } from "../../App/routes";
 
-const WhatToReadNext = () => {
+type TypeProps = {
+  selectedPath?: string;
+};
+
+const WhatToReadNext = ({ selectedPath }: TypeProps) => {
+  const { t } = useTranslation();
+
+  const filteredArray = PostListData.filter(
+    (item) => item.path !== selectedPath
+  );
+
   return (
     <>
       <div className="pb-20">
-        <p className="ml-5 md:ml-32 text-3xl font-bold">What to read next</p>
-        <div className="ml-1 md:ml-32 pt-14 flex flex-col md:flex-row w-full md:w-10/12">
-          <div className="md:mr-10 mb-10 md:mb-0">
-            <img
-              className="w-full md:w-auto"
-              src={fotoOfWomenashboard}
-              alt="Read Next 1"
-            />
-            <p className="pt-5 pb-5 text-base">
-              By <strong className="text-amber-300">John Doe </strong>| Aug 23,
-              2022
-            </p>
-            <p className="pb-5 text-3xl font-medium">
-              A UX Case Study Creating a Studious Environment for Students:
-            </p>
-            <p className="text-slate-500 text-base md:mr-10">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident.
-            </p>
+        <p className="ml-5 md:ml-32 text-3xl font-bold">
+          {t("What to read next")}
+        </p>
+      </div>
+      <div className="mx-28 flex flex-col md:flex-row">
+        {filteredArray.map((item) => (
+          <div key={item.path} className="mx-5 pt-14 md:w-10/12">
+            <div>
+              <img src={item.picture} alt="Read Next" />
+              <p className="pt-5 pb-5 text-base">
+                By <strong className="text-amber-300">John Doe </strong>| Aug
+                23, 2022
+              </p>
+              <Link
+                to={`${generateRoutePath({ name: RouteName.Blog })}/${
+                  item.path
+                }`}
+              >
+                <p className="pb-5 text-3xl font-medium">{item.title}</p>
+              </Link>
+              <p className="text-slate-500 text-base w-72 overflow-hidden truncate">
+                {item.text}
+              </p>
+            </div>
           </div>
-          <div className="md:mr-10 mb-10 md:mb-0">
-            <img
-              className="w-full md:w-auto"
-              src={photoOfPeople}
-              alt="Read Next 2"
-            />
-            <p className="pt-5 pb-5 text-base">
-              By <strong className="text-amber-300">John Doe </strong>| Aug 23,
-              2022
-            </p>
-            <p className="pb-5 text-3xl font-medium">
-              A UX Case Study Creating a Studious Environment for Students:
-            </p>
-            <p className="text-slate-500 text-base md:mr-10">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident.
-            </p>
-          </div>
-          <div>
-            <img
-              className="w-full md:w-auto"
-              src={photoOfWomen}
-              alt="Read Next 3"
-            />
-            <p className="pt-5 pb-5 text-base">
-              By <strong className="text-amber-300">John Doe </strong>| Aug 23,
-              2022
-            </p>
-            <p className="pb-5 text-3xl font-medium">
-              A UX Case Study Creating a Studious Environment for Students:
-            </p>
-            <p className="text-slate-500 text-base md:mr-10">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );

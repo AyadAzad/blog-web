@@ -16,10 +16,7 @@ const PostListData = [
     // we had this error before, make sure the file path starts with a '/'
     // otherwise it doesn't work
     contentPath: "/src/Components/MarkdownBlogs/HowToCreateReactProject.md",
-    text:
-      " Duis aute irure dolor in reprehenderit in voluptate velit esse\n" +
-      "                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n" +
-      "                cupidatat non proident.",
+    text: " React JS has become one of the most popular JavaScript libraries for building user interfaces. Its component-based architecture and efficient data binding make it a go-to choice for developers when creating modern web applications.",
   },
 
   {
@@ -29,10 +26,7 @@ const PostListData = [
     catagory: "Business",
     title: "How to run your own bussiness",
     contentPath: "/src/Components/MarkdownBlogs/HowToOpenYourOwnBusiness.md",
-    text:
-      " Duis aute irure dolor in reprehenderit in voluptate velit esse\n" +
-      "                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n" +
-      "                cupidatat non proident.",
+    text: "Starting a business is more than just an enterprise, it is a journey full of passion, perseverance and the pursuit of a dream.",
   },
 
   {
@@ -43,10 +37,7 @@ const PostListData = [
     title: "Current challenges and trends in the global economy",
     contentPath:
       "/src/Components/MarkdownBlogs/CurrentChallengesAndTrendsInTheGlobalEconomy.md",
-    text:
-      " Duis aute irure dolor in reprehenderit in voluptate velit esse\n" +
-      "                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n" +
-      "                cupidatat non proident.",
+    text: "The modern global economy is facing a number of complex challenges that significantly affect its structure and dynamics. In this article, we will look at some of the key trends and challenges facing the modern economy, as well as their impact on business, investment and society as a whole.",
   },
   {
     path: "Startup:The-Art-of-Starting-and-the-Path-to-Success",
@@ -55,10 +46,7 @@ const PostListData = [
     catagory: "Startup",
     title: "Startup: The Art of Starting and the Path to Success",
     contentPath: "/src/Components/MarkdownBlogs/Startup.md",
-    text:
-      " Duis aute irure dolor in reprehenderit in voluptate velit esse\n" +
-      "                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n" +
-      "                cupidatat non proident.",
+    text: "Startups are the heart of innovation and the engine of progress in the business world. In this article, we will look at the key aspects of creating and developing a startup, sharing with you some valuable tips for those who are just starting their entrepreneurial journey.",
   },
 ];
 

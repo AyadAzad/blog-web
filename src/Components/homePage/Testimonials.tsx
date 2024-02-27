@@ -19,8 +19,9 @@ const Testimonials = () => {
 
         <div className="w-full md:pl-14 md:pr-40 flex flex-col justify-center items-start gap-16 md:gap-32">
           <p className="text-xl md:text-2xl font-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {t(
+              "Excellent site, a lot of useful and varied information, I recommend it"
+            )}
           </p>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             <div className="flex flex-row items-center md:items-start">

@@ -1,5 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import { RouteName, generateRoutePath, showInMenuRoutes } from "../App/routes";
+import {
+  RouteName,
+  generateRoutePath,
+  showInMenuRoutes,
+} from "../App/routes/index.ts";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import SearchBar from "./SearchBar.tsx";

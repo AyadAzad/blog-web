@@ -1,6 +1,6 @@
 # How to open your own business
 
-Starting a business is more than just an enterprise; it is a journey full of passion, perseverance and the pursuit of a dream. Here is your plan that will start your entrepreneurial odyssey:
+Starting a business is more than just an enterprise, it is a journey full of passion, perseverance and the pursuit of a dream. Here is your plan that will start your entrepreneurial odyssey:
 
 - **Define your passion:**
   To build a successful business, start with what you love. Identify your passion and how it relates to solving a problem or meeting a need in the market. Your business is not just a product; it is an extension of your enthusiasm.
