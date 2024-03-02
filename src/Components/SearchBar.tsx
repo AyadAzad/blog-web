@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect, ChangeEvent } from "react";
-import PostListData from "./Blogs/PostListData";
+import PostListData from "./Blogs/PostListData.tsx";
 import { RouteName, generateRoutePath } from "../App/index.ts";
 import { Link } from "react-router-dom";
 interface Post {

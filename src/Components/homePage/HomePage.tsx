@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import menWithComputer from "../../assets/menWithComputer.png";
-import BusinessCard from "./BusinessCard";
-import ChooseCategory from "./ChooseCategory";
-import FuturePosts from "./FuturePosts";
-import JoinNow from "./JoinNow";
-import ListOfAuthers from "./ListOfAuthers";
-import Testimonials from "./Testimonials";
-import WhyWeStarted from "./WhyWeStarted";
+import BusinessCard from "./BusinessCard.tsx";
+import ChooseCategory from "./ChooseCategory.tsx";
+import FuturePosts from "./FuturePosts.tsx";
+import JoinNow from "./JoinNow.tsx";
+import ListOfAuthers from "./ListOfAuthers.tsx";
+import Testimonials from "./Testimonials.tsx";
+import WhyWeStarted from "./WhyWeStarted.tsx";
 import NavBar from "../NavBar.tsx";
 import Footer from "../Footer.tsx";
 
@@ -24,19 +24,20 @@ const HomePage = () => {
         />
         <div className="absolute top-1/2 lg:left-1/3 sm:left-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-screen-md mx-auto text-white font-sans p-4 sm:p-8">
           <p className="text-base pb-3">
-            POSTED ON <b>STARTUP</b>
+            {t("POSTED ON ")}
+            <b>{t("STARTUP")}</b>
           </p>
           <p className="pb-3 text-2xl sm:text-4xl lg:text-6xl">
-            Step-by-step guide to choosing great font pairs
+            {t("Step by step we will develop together")}
           </p>
           <p className="pb-3 text-base">
             By <strong className="text-amber-300">James West</strong> | May 23,
             2022
           </p>
           <p className="pb-3 text-base">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident.
+            {t(
+              "Our team is aimed at actively developing the blog, supporting and motivating our authors."
+            )}
           </p>
           <button className="font-bold pb-2 bg-amber-300 text-black w-1/4 h-14">
             {t("Read More")} &#62;

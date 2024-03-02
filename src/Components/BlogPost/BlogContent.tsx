@@ -11,8 +11,8 @@ import Footer from "../Footer.tsx";
 import postListData from "../Blogs/PostListData.tsx";
 const BlogContent = () => {
   const { t } = useTranslation();
-
   const { path } = useParams();
+
   const selectedPost = PostListData.find((post) => path === post.path);
 
   if (!selectedPost) {
@@ -47,8 +47,7 @@ const BlogContent = () => {
           <MarkdownFileRenderer filePath={selectedPost.contentPath} />
         </div>
       </div>
-
-      <WhatToReadNext />
+      <WhatToReadNext selectedPath={path} />
       <JoinNow />
       <Footer />
     </>
