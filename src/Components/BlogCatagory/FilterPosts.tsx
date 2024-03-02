@@ -56,12 +56,7 @@ const FilterPosts = ({ posts, title }: TypeProps) => {
         </div>
       ))}
       <div className="self-center flex justify-between gap-5 mt-20 items-start max-md:mt-10">
-        <div className="text-zinc-500 text-center text-2xl font-bold leading-8">
-          &lt; Prev
-        </div>
-        <div className="text-gray-800 text-center text-3xl font-bold leading-10 tracking-tighter self-stretch">
-          Next &gt;
-        </div>
+
       </div>
     </div>
   );

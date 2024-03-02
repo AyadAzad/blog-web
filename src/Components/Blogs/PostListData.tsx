@@ -14,7 +14,7 @@ const PostListData = [
     author_picture:Ayad_Azad,
     picture: womanInfront,
     icon: technoogy,
-    catagory: "Technology",
+    catagory: "Business",
     title: "How to create a React project",
     // we had this error before, make sure the file path starts with a '/'
     // otherwise it doesn't work
@@ -27,7 +27,7 @@ const PostListData = [
 
   {
     path: "How-to-run-your-own-bussiness",
-    author: "Alexandra Rybinskayaa",
+    author: "Alexandra Rybinskaya",
     author_picture:AlexandraRybinskaya,
     picture: photoOfPeople,
     icon: business,
@@ -58,7 +58,7 @@ const PostListData = [
   {
     path: "Startup:The-Art-of-Starting-and-the-Path-to-Success",
     author: "Alexandra Rybinskaya",
-    author_picture:Ayad_Azad,
+    author_picture:AlexandraRybinskaya,
     picture: photoOfWomen,
     icon: technoogy,
     catagory: "Startup",
