@@ -1,10 +1,14 @@
+import { useTranslation } from "react-i18next";
 import Leslie_Alexander from "../../assets/women3.png";
 import ManInBlack from "../../assets/man-in-black-crew-neck-t-shirt-sitting-beside-woman-in-gray-crew-neck-t-shirt-3153201.png";
 import StainedGlass from "../../assets/stained-glass-high-rise-building-1106476.png";
 import Pattern from "../../assets/Pattern.png";
 import Footer from "../Footer.tsx";
 import NavBar from "../NavBar.tsx";
+
 const LeslieAlexander = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <NavBar />
@@ -26,11 +30,9 @@ const LeslieAlexander = () => {
                       Hey there, I’m Leslie Alexander and welcome to my Blog
                     </div>
                     <div className="justify-center text-zinc-500 text-base leading-7 self-stretch max-w-[720px] mr-5 mt-14 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Non blandit massa enim nec. Scelerisque viverra
-                      mauris in aliquam sem. At risus viverra adipiscing at in
-                      tellus.
+                      {t(
+                        "Greetings to you! Here I share my thoughts, ideas and stories that excite me and, hopefully, interest you.My name is Leslie Alexander, and I am a passionate writer who strives to express my thoughts beautifully and honestly. Here you will find articles on various topics: excellent short stories to book reviews, from reflection on life to self-development tips. I am sure that every story has its own value, and I am happy to share my thoughts with you. Thank you for looking into my world. I hope that my words will bring you pleasure and inspiration. Welcome, and have fun reading!"
+                      )}
                     </div>
                   </span>
                 </div>

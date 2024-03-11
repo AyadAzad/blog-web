@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Jenny_Wilson from "../../assets/women2.png";
 import ManInBlack from "../../assets/man-in-black-crew-neck-t-shirt-sitting-beside-woman-in-gray-crew-neck-t-shirt-3153201.png";
 import StainedGlass from "../../assets/stained-glass-high-rise-building-1106476.png";
@@ -5,6 +6,8 @@ import Pattern from "../../assets/Pattern.png";
 import Footer from "../Footer.tsx";
 import NavBar from "../NavBar.tsx";
 const JennyWilson = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <NavBar />
@@ -26,10 +29,9 @@ const JennyWilson = () => {
                       Hey there, I’m Jenny Wilson and welcome to my Blog
                     </div>
                     <div className="justify-center text-zinc-500 text-base leading-7 self-stretch max-w-[720px] mr-5 mt-14 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Non blandit massa enim nec. Scelerisque viverra
-                      mauris in aliquam sem. At risus viverra adipiscing at in
+                      {t(
+                        "Hello! My name is Jenny Wilson, and I am the author of this content. In this corner of the Internet, I share my thoughts, ideas and life stories. My content is a place where I turn my thoughts into words, and words into stories. Here you will find reflections on life, book reviews, travel and much more.I believe that words can inspire, comfort and unite. My goal is to create a place where everyone can find something that will make you think or give you a smile.Thanks for stopping by. I hope you will find something interesting and inspiring here. Welcome!"
+                      )}
                       tellus.
                     </div>
                   </span>
