@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <>
       <NavBar />
-      <div className="w-full flex items-center justify-center mt-8 md:mt-20 mb-10 ml-2 mr-2">
+      <div className="w-full flex items-center justify-center mt-8 md:mt-28 mb-10  mr-2">
         <div className="flex items-start flex-col justify-center w-full md:w-3/4">
           <div className="bg-white">
             <p className="text-base pb-3 md:pb-5">{t("ABOUT US")}</p>

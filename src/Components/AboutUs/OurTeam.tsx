@@ -6,7 +6,7 @@ const OurTeam = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="pt-16 md:pt-32 flex items-center justify-center pb-8 md:pb-32 pl-2 pr-2">
+    <div className="pt-16 md:pt-32 flex items-center justify-center pb-8 md:pb-32">
       <div className="w-full md:w-10/12">
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-2/4 md:pr-32 pt-8 md:pt-20">
