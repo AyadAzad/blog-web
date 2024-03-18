@@ -9,6 +9,8 @@ import Testimonials from "./Testimonials.tsx";
 import WhyWeStarted from "./WhyWeStarted.tsx";
 import NavBar from "../NavBar.tsx";
 import Footer from "../Footer.tsx";
+import { Link } from "react-router-dom";
+import { RouteName, generateRoutePath } from "../../App/index.ts";
 import PostListData from "../Blogs/PostListData.tsx";
 const HomePage = () => {
   const { t } = useTranslation();
@@ -40,9 +42,12 @@ const HomePage = () => {
               "Our team is aimed at actively developing the blog, supporting and motivating our authors."
             )}
           </p>
+            <Link to={`${generateRoutePath({name: RouteName.Blog})}/${randomPost.path}`}>
+
           <button className="font-bold pb-2 bg-amber-300 text-black w-1/4 h-14" >
             {t("Read More")} &#62;
           </button>
+            </Link>
         </div>
       </div>
       <FuturePosts />

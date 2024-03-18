@@ -9,11 +9,12 @@ type TypeProps = {
 };
 
 const WhatToReadNext = ({ selectedPath }: TypeProps) => {
-  const { t } = useTranslation();
 
+  const { t } = useTranslation();
   const filteredArray = PostListData.filter(
     (item) => item.path !== selectedPath
   );
+
 
   return (
     <>
@@ -28,7 +29,7 @@ const WhatToReadNext = ({ selectedPath }: TypeProps) => {
             <div>
               <img src={item.picture} alt="Read Next" />
               <p className="pt-5 pb-5 text-base">
-                By <strong className="text-amber-300">John Doe </strong>| Aug
+                By <strong className="text-amber-600">{item.author} </strong>| Aug
                 23, 2022
               </p>
               <Link
@@ -45,6 +46,7 @@ const WhatToReadNext = ({ selectedPath }: TypeProps) => {
           </div>
         ))}
       </div>
+
     </>
   );
 };
