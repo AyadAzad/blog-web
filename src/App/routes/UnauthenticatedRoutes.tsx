@@ -3,6 +3,7 @@ import { allRoutes, generateRoutePath } from "./helpers";
 import { RouteConfig, RouteName } from "./interfaces";
 
 export function UnauthenticatedRoutes(): JSX.Element {
+
   return (
     <Routes>
       <Route element={<Outlet />}>

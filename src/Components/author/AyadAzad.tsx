@@ -9,7 +9,7 @@ const AyadAzad = () => {
   const { t } = useTranslation();
 
   return (
-    <>
+    <div className="topOfPage">
       <NavBar />
       <div className="bg-white flex flex-col items-stretch pb-12">
         <div className="bg-gray-100 flex w-full flex-col items-center pt-12 px-16 max-md:max-w-full max-md:px-5">
@@ -49,7 +49,7 @@ const AyadAzad = () => {
         </span>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

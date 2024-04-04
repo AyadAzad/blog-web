@@ -50,7 +50,11 @@ const ListOfAuthers = () => {
               </Link>
             </p>
             <p className="text-slate-500 pb-6 md:pb-11 text-center">
-              Content Writer @Company
+                {
+                    author.label == "Ayad Azad" || author.label == "Alexandra Rybinskaya"
+                        ? "Co Founder, Developer, Content Writer"
+                        : "Content writer"
+                }
             </p>
             <div className="pb-6 md:pb-10 flex items-center justify-center">
               <img src={socialWrapper} alt="Social"></img>
