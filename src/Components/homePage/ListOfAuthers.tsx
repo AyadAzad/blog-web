@@ -29,8 +29,8 @@ const ListOfAuthers = () => {
             key={author.key}
             className={
               author.key === RouteName.AlexandraRybinskaya
-                ? "bg-slate-200 mx-auto my-5 md:my-0 md:mx-5 md:px-0 px-10 pt-10 hover:bg-amber-100 md:w-72"
-                : "bg-slate-200 mx-auto my-5 md:my-0 md:mx-5 px-10 pt-10 hover:bg-amber-100 md:w-72"
+                ? "bg-slate-200 mx-auto my-5 md:my-0 md:mx-5 md:px-0 px-10 pt-10 hover:bg-amber-100 md:w-72 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                : "bg-slate-200 mx-auto my-5 md:my-0 md:mx-5 px-10 pt-10 hover:bg-amber-100 md:w-72 transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
             }
           >
             <div className="flex items-center justify-center">
@@ -50,11 +50,10 @@ const ListOfAuthers = () => {
               </Link>
             </p>
             <p className="text-slate-500 pb-6 md:pb-11 text-center">
-                {
-                    author.label == "Ayad Azad" || author.label == "Alexandra Rybinskaya"
-                        ? "Co Founder, Developer, Content Writer"
-                        : "Content writer"
-                }
+              {author.label == "Ayad Azad" ||
+              author.label == "Alexandra Rybinskaya"
+                ? "Co Founder, Developer, Content Writer"
+                : "Content writer"}
             </p>
             <div className="pb-6 md:pb-10 flex items-center justify-center">
               <img src={socialWrapper} alt="Social"></img>

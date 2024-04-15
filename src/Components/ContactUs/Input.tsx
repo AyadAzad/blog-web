@@ -32,7 +32,7 @@ const Input = () => {
   const styleError =
     "mt-2 px-7 py-5 bg-white border border-red-600 placeholder-red-500 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full sm:text-sm focus:ring-1";
   const styleButton =
-    "mt-2 font-bold pb-2 bg-amber-300 text-black w-full h-14 hover:bg-amber-400";
+    "mt-2 font-bold text-center bg-amber-300 text-black w-full h-14 hover:bg-amber-400 transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110";
   const styleButtonDisabled =
     "mt-2 font-bold pb-2 bg-slate-300 text-black w-full h-14 hover:bg-amber-400 opacity-50 cursor-not-allowed";
 

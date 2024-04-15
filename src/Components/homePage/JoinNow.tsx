@@ -19,7 +19,7 @@ const JoinNow = () => {
             )}
           </p>
           <Link to={generateRoutePath({ name: RouteName.ContactUs })}>
-            <button className="font-bold pb-2 bg-amber-300 text-black w-52 h-14">
+            <button className="font-bold text-center bg-amber-300 text-black w-52 h-14 transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110">
               {t("Join Now")}
             </button>
           </Link>

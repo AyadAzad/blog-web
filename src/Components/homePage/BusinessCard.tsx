@@ -22,7 +22,7 @@ const BusinessCard = () => {
             )}
           </p>
           <Link to={generateRoutePath({ name: RouteName.AboutUs })}>
-            <button className="font-bold pb-2 text-violet-700 ">
+            <button className="font-bold text-center text-violet-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
               {t("Read More")} &#62;
             </button>
           </Link>

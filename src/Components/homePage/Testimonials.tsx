@@ -38,11 +38,11 @@ const Testimonials = () => {
               </div>
             </div>
             <div className="flex flex-row mt-4 md:mt-0">
-              <div className="px-2 md:px-4">
+              <div className="px-2 md:px-4 animate-bounce">
                 <img src={arrow} alt="Arrow 1" />
               </div>
-              <div>
-                <img src={arrow2} alt="Arrow 2" />
+              <div className="animate-bounce">
+                <img src={arrow2} alt="Arrow 2 " />
               </div>
             </div>
           </div>

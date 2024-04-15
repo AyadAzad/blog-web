@@ -24,7 +24,7 @@ const ChooseCategory = () => {
         {chooseCategory.map((item) => (
           <div
             key={item.key}
-            className="border-2 border-solid border-slate-300 mx-5 my-5 px-4 pt-4 sm:hover:bg-amber-300"
+            className="border-2 border-solid border-slate-300 mx-5 my-5 px-4 pt-4 sm:hover:bg-amber-300 transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110"
           >
             <Link to={`${generateRoutePath({ name: item.key })}`}>
               <img

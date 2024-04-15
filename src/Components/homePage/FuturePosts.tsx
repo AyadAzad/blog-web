@@ -7,8 +7,8 @@ import { RouteName } from "../../App/routes";
 const FuturePosts = () => {
   const { t } = useTranslation();
 
-  const featuredPost = Math.floor(Math.random() * PostListData.length)
-  const randomPost = PostListData[featuredPost]
+  const featuredPost = Math.floor(Math.random() * PostListData.length);
+  const randomPost = PostListData[featuredPost];
 
   return (
     <div className="pt-8 sm:pt-32 flex flex-col sm:flex-row px-4 sm:px-32 pb-4 sm:pb-20">
@@ -23,8 +23,8 @@ const FuturePosts = () => {
             alt="Featured Post"
           />
           <p className="pb-4 sm:pb-11 text-base">
-            By <strong className="text-indigo-700">{randomPost.author}</strong> | May 23,
-            2022
+            By <strong className="text-indigo-700">{randomPost.author}</strong>{" "}
+            | May 23, 2022
           </p>
           <p className="pb-4 sm:pb-11 font-bold text-xl sm:text-3xl w-full sm:w-3/4">
             {randomPost.title}
@@ -37,7 +37,7 @@ const FuturePosts = () => {
               randomPost.path
             }`}
           >
-            <button className="font-bold pb-2 bg-amber-300 text-black w-full sm:w-52 h-14 cursor-pointer">
+            <button className="font-bold text-center bg-amber-300 text-black w-full sm:w-52 h-14 cursor-pointer transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110">
               {t("Read More")} &#62;
             </button>
           </Link>
@@ -51,8 +51,8 @@ const FuturePosts = () => {
           {PostListData.map((item) => (
             <div key={item.path} className="mb-4 sm:mb-20 hover:bg-amber-100">
               <p>
-                By <strong className="text-indigo-700">{item.author} </strong>| May
-                23, 2022
+                By <strong className="text-indigo-700">{item.author} </strong>|
+                May 23, 2022
               </p>
               <p className="text-xl sm:text-2xl font-bold">
                 <Link
