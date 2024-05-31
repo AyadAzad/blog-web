@@ -2,13 +2,11 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import PostListData from "../Blogs/PostListData.tsx";
 import NavBar from "../NavBar.tsx";
-import profilePicture from "../../assets/ProfilePicture.png";
 import photoOfWomen from "../../assets/photoOfWomen.png";
 import MarkdownFileRenderer from "./MarkdownFileRenderer.tsx";
 import WhatToReadNext from "./WhatToReadNext.tsx";
 import JoinNow from "../homePage/JoinNow.tsx";
 import Footer from "../Footer.tsx";
-import postListData from "../Blogs/PostListData.tsx";
 const BlogContent = () => {
   const { t } = useTranslation();
   const { path } = useParams();
