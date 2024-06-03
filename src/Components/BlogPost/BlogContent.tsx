@@ -7,7 +7,6 @@ import MarkdownFileRenderer from "./MarkdownFileRenderer.tsx";
 import WhatToReadNext from "./WhatToReadNext.tsx";
 import JoinNow from "../homePage/JoinNow.tsx";
 import Footer from "../Footer.tsx";
-
 const BlogContent = () => {
   const { t } = useTranslation();
   const { path } = useParams();
