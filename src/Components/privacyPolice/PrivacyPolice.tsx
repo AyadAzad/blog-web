@@ -8,9 +8,9 @@ const PrivacyPolice = () => {
   return (
     <>
       <NavBar />
-      <div>
-        <div className="bg-gray-100 text-center pt-20 pb-20 md:pt-24 md:pb-24">
-          <p className="font-bold text-5xl md:text-6xl">
+      <div className="px-5 xl:px-0 ">
+        <div className="bg-gray-100 text-center pt-20 pb-20 xl:pt-24 xl:pb-24">
+          <p className="font-bold text-5xl xl:text-6xl">
             {t("Privacy Policy")}
           </p>
           <p className="text-slate-500 pt-5">
@@ -18,8 +18,8 @@ const PrivacyPolice = () => {
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <div className="pt-10 md:pt-32 w-full md:w-2/4 pb-10 md:pb-32">
-            <p className="text-2xl md:text-3xl font-bold">
+          <div className="pt-10 xl:pt-32 w-full xl:w-2/4 pb-10 xl:pb-32">
+            <p className="text-2xl xl:text-3xl font-bold">
               {t("General Information")}
             </p>
             <p className="pt-5">
@@ -27,7 +27,7 @@ const PrivacyPolice = () => {
                 "Thank you for visiting InsightBlog. This Privacy Policy outlines how we collect, use, and safeguard your personal information.We may collect the following types of personal information:"
               )}
             </p>
-            <ul className="md:pl-5 list-decimal pl-5">
+            <ul className="xl:pl-5 list-decimal pl-5">
               <li>
                 <b>{t("Voluntarily Provided Information:")}</b>
                 {t(

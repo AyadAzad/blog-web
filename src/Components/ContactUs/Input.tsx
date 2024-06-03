@@ -38,7 +38,7 @@ const Input = () => {
 
   return (
     <div className="flex items-center justify-center pb-20">
-      <div className="w-2/4">
+      <div className="lg:w-2/4 w-full mx-5 lg:mx-0">
         <form onSubmit={formik.handleSubmit}>
           <input
             className={formik.errors.fullName ? styleError : style}
@@ -48,7 +48,6 @@ const Input = () => {
             }
             {...formik.getFieldProps("fullName")}
           />
-
           <input
             className={formik.errors.email ? styleError : style}
             type="email"

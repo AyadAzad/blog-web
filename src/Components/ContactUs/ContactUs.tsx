@@ -9,7 +9,7 @@ const ContactUs = () => {
   return (
     <>
       <NavBar />
-      <div className="text-center pt-32 pb-24">
+      <div className="text-center xl:pt-32 pt-5 pb-24">
         <div className="font-bold text-1xl">{t("CONTACT US")}</div>
         <div className="font-bold text-5xl">
           {t("Let’s Start a Conversation")}

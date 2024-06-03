@@ -51,7 +51,7 @@ const HomePage = () => {
               randomPost.path
             }`}
           >
-            <button className="font-bold text-center  bg-amber-300 text-black w-1/4 h-14 transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110">
+            <button className="font-bold text-center  bg-amber-300 text-black md:w-1/4 w-1/2 h-14 transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110">
               {t("Read More")} &#62;
             </button>
           </Link>

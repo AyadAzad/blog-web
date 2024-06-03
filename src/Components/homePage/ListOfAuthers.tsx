@@ -23,7 +23,7 @@ const ListOfAuthers = () => {
       <p className="pb-6 md:pb-11 font-bold text-xl md:text-3xl text-center pt-10 md:pt-20">
         {t("List of Authors")}
       </p>
-      <div className="flex flex-col md:flex-row pb-10 md:pb-20 w-full md:w-10/12 mx-auto">
+      <div className="flex flex-col sm:flex-col md:flex-row pb-10 md:pb-20  xl:w-10/12 xl:mx-auto">
         {authors.map((author) => (
           <div
             key={author.key}
@@ -53,7 +53,7 @@ const ListOfAuthers = () => {
               {author.label == "Ayad Azad" ||
               author.label == "Alexandra Rybinskaya"
                 ? "Co Founder, Developer, Content Writer"
-                : "Content writer"}
+                : "UI / UX - Designer, QA, Content writer"}
             </p>
             <div className="pb-6 md:pb-10 flex items-center justify-center">
               <img src={socialWrapper} alt="Social"></img>

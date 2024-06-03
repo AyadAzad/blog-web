@@ -17,10 +17,10 @@ const ChooseCategory = () => {
   };
   return (
     <>
-      <p className="pb-6 sm:pb-11 font-bold text-xl sm:text-3xl pt-4 sm:pt-32 text-center">
+      <p className="pb-6 xl:pb-11 font-bold text-xl xl:text-3xl pt-4 xl:pt-32 text-center">
         {t("Choose A Category")}
       </p>
-      <div className="flex flex-col sm:flex-row pb-4 sm:pb-20 w-full sm:w-10/12 ml-4 sm:ml-32">
+      <div className="flex flex-col sm:flex-row pb-4 xl:pb-20 w-full xl:w-10/12  xl:ml-32">
         {chooseCategory.map((item) => (
           <div
             key={item.key}
@@ -31,10 +31,10 @@ const ChooseCategory = () => {
                 src={iconChooseCategory[item.key].img}
                 alt={item.label}
               ></img>
-              <p className="pt-2 pb-5 font-bold text-lg sm:text-2xl">
+              <p className="pt-2 pb-5 font-bold text-lg xl:text-2xl">
                 {t(item.label)}
               </p>
-              <p className="text-slate-500 pb-4 sm:pb-11">
+              <p className="text-slate-500 pb-4 xl:pb-11">
                 {t("Here you can read the articles of the authors")}
               </p>
             </Link>
