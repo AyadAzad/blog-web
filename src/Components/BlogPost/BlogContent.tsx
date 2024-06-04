@@ -19,8 +19,8 @@ const BlogContent = () => {
   return (
     <>
       <NavBar />
-      <div className="md:ml-auto">
-        <div className="pt-20 pl-28 flex flex-row">
+      <div>
+        <div className="pt-20 pl-10 lg:pl-28 flex flex-row">
           <div>
             <img src={selectedPost.author_picture} alt="Profile" width={40} />
           </div>
@@ -31,17 +31,17 @@ const BlogContent = () => {
             </p>
           </div>
         </div>
-        <p className="pt-5 pb-11 px-28 md:text-6xl text-3xl w-3/4">
+        <p className="pt-5 pb-11 px-14 lg:px-28 md:text-6xl text-3xl w-full xl:w-3/4">
           {selectedPost.title}
         </p>
-        <div className="pt-2 pb-11 px-28 flex flex-row">
+        <div className="pt-2 pb-11 px-14 lg:px-28 flex flex-row">
           <img className="w-7" src={selectedPost.icon} alt="Startap" />
           <p className="pl-5 text-2xl">{t(selectedPost.catagory)}</p>
         </div>
         <div className="flex items-center justify-center">
           <img src={photoOfWomen} alt="Photo of Women" />
         </div>
-        <div className="ml-2 md:ml-80 mt-20 md:w-7/12 pb-20 md:pr-10">
+        <div className="ml-2 xl:ml-80 mt-20 xl:w-7/12 pb-20 xl:pr-10">
           <MarkdownFileRenderer filePath={selectedPost.contentPath} />
         </div>
       </div>

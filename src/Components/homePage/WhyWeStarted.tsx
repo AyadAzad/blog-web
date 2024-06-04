@@ -9,7 +9,7 @@ const WhyWeStarted = () => {
 
   return (
     <div className="w-full xl:w-10/12 ml-auto mr-auto xl:ml-32 xl:mr-32 pt-8 xl:pt-20 pb-10 xl:pb-20 mb-60 xl:mb-10">
-      <div className="relative w-full  ">
+      <div className="relative w-full">
         <img src={people} />
         <div className="absolute bg-white pl-10 left-14 right-0 xl:left-1/3 xl:right-40 xl:pl-20 pt-20 xl:bottom-0 bottom-0 h-5/6">
           <p className="top-52 text-base pb-4 xl:pb-11">

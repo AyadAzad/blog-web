@@ -20,7 +20,7 @@ const ChooseCategory = () => {
       <p className="pb-6 xl:pb-11 font-bold text-xl xl:text-3xl pt-4 xl:pt-32 text-center">
         {t("Choose A Category")}
       </p>
-      <div className="flex flex-col sm:flex-row pb-4 xl:pb-20 w-full xl:w-10/12  xl:ml-32">
+      <div className="flex flex-col items-center justify-center md:flex-row xl:flex-nowrap sm:flex-wrap pb-4 md:pb-20 xl:w-10/12 md:w-full xl:ml-32 ">
         {chooseCategory.map((item) => (
           <div
             key={item.key}

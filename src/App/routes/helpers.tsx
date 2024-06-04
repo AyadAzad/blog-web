@@ -82,7 +82,7 @@ const routes: Record<RouteName, RouteConfig> = {
     isAuthor: true,
   },
   [RouteName.AlexandraRybinskaya]: {
-    label: "Alexandra Rybinskaya",
+    label: "Alexa Rybinskay",
     path: "/AlexandraRybinskaya",
     key: RouteName.AlexandraRybinskaya,
     component: AlexandraRybinskaya,
