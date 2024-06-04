@@ -23,45 +23,43 @@ const ListOfAuthers = () => {
       <p className="pb-6 md:pb-11 font-bold text-xl md:text-3xl text-center pt-10 md:pt-20">
         {t("List of Authors")}
       </p>
-      <div className="flex flex-col sm:flex-col md:flex-row pb-10 md:pb-20  xl:w-10/12 xl:mx-auto">
+      <div className="flex flex-col items-center justify-center md:flex-wrap xl:flex-nowrap sm:flex-col md:flex-row pb-10 md:pb-20  xl:w-10/12 xl:mx-auto">
         {authors.map((author) => (
-          <div
-            key={author.key}
-            className={
-              author.key === RouteName.AlexandraRybinskaya
-                ? "bg-slate-200 mx-auto my-5 md:my-0 md:mx-5 md:px-0 px-10 pt-10 hover:bg-amber-100 md:w-72 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                : "bg-slate-200 mx-auto my-5 md:my-0 md:mx-5 px-10 pt-10 hover:bg-amber-100 md:w-72 transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
-            }
-          >
-            <div className="flex items-center justify-center">
-              <img
-                className={
-                  author.key === RouteName.AlexandraRybinskaya
-                    ? "rounded-full w-32 h-32"
-                    : "w-32 h-32"
-                }
-                src={picturesAuthors[author.key].img}
-                alt={author.label}
-              ></img>
-            </div>
-            <p className="pb-3 md:pb-5 font-bold text-lg md:text-2xl text-center">
-              <Link to={generateRoutePath({ name: author.key })}>
+          <Link to={generateRoutePath({ name: author.key })}>
+            <div
+              key={author.key}
+              className={
+                "bg-slate-200 mx-auto my-5 md:my-0 md:mb-5 md:mx-5 px-10 pt-10 hover:bg-amber-100 md:w-72 transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110"
+              }
+            >
+              <div className="flex items-center justify-center">
+                <img
+                  className={
+                    author.key === RouteName.AlexandraRybinskaya
+                      ? "rounded-full w-32 h-32"
+                      : "w-32 h-32"
+                  }
+                  src={picturesAuthors[author.key].img}
+                  alt={author.label}
+                ></img>
+              </div>
+              <p className="pb-3 md:pb-5 font-bold text-lg md:text-2xl text-center">
                 {author.label}
-              </Link>
-            </p>
-            <p className="text-slate-500 pb-6 md:pb-11 text-center">
-              {author.label == "Ayad Azad" ||
-              author.label == "Alexandra Rybinskaya"
-                ? "Co Founder, Developer, Content Writer"
-                : "UI / UX - Designer, QA, Content writer"}
-            </p>
-            <div className="pb-6 md:pb-10 flex items-center justify-center">
-              <img src={socialWrapper} alt="Social"></img>
+              </p>
+              <p className="text-slate-500 pb-6 md:pb-11 text-center">
+                {author.label == "Ayad Azad" ||
+                author.label == "Alexandra Rybinskaya"
+                  ? "Co Founder, Developer, Content Writer"
+                  : "UI / UX - Designer, QA, Content writer"}
+              </p>
+              <div className="pb-6 md:pb-10 flex items-center justify-center">
+                <img src={socialWrapper} alt="Social"></img>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-      <div className="pt-6 md:pt-10 pb-6 md:pb-10 flex items-center justify-center w-3/4 ml-14 md:ml-48">
+      <div className="pt-6 md:pt-10 pb-6 md:pb-10 flex items-center justify-center w-3/4 ml-14 md:ml-24 xl:ml-48">
         <img src={logoComponents} alt="Logo"></img>
       </div>
     </>
