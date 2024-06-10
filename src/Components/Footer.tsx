@@ -46,9 +46,12 @@ const Footer = () => {
 
             <div>
               <div>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium flex flex-row">
+                <ul className="text-gray-500 dark:text-gray-400 font-medium flex md:flex-row flex-wrap">
                   {footerRoutes.map((route) => (
-                    <li key={route.key} className="px-2 hover:text-amber-400">
+                    <li
+                      key={route.key}
+                      className="px-2 hover:text-amber-400 text-nowrap"
+                    >
                       <Link to={generateRoutePath({ name: route.key })}>
                         {t(`routes.${route.label}`)}
                       </Link>

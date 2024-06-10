@@ -4,7 +4,7 @@ const BusinessCard = () => {
   const { t } = useTranslation();
   return (
     <div className="flex items-center justify-center pb-11">
-      <div className="bg-purple-700 w-2/4 flex flex-row px-14 py-14">
+      <div className="bg-purple-700 lg:w-2/4 w-full flex md:flex-row flex-col lg:mx-0 mx-5 md:px-24 lg:px-14 px-5 py-14">
         <div className="text-slate-200 pr-14">
           <p className="pb-3">{t("Working hours")}</p>
           <hr className="pt-3 w-full"></hr>

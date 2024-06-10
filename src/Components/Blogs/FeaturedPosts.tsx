@@ -23,7 +23,7 @@ const FeaturedPosts = () => {
                 "Our team is aimed at actively developing the blog, supporting and motivating our authors."
               )}
             </div>
-            <span className="text-gray-800 text-lg font-bold leading-6 whitespace-nowrap items-stretch bg-amber-300 justify-center mt-9 px-12 py-4 self-start max-md:px-5">
+            <span className="text-gray-800 text-lg font-bold leading-6 whitespace-nowrap items-stretch bg-amber-300 justify-center mt-9 px-12 py-4 self-start max-md:px-5 transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110">
               {t("Read More")} &gt;
             </span>
           </span>

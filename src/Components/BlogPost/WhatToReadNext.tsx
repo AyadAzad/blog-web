@@ -9,28 +9,26 @@ type TypeProps = {
 };
 
 const WhatToReadNext = ({ selectedPath }: TypeProps) => {
-
   const { t } = useTranslation();
   const filteredArray = PostListData.filter(
     (item) => item.path !== selectedPath
   );
 
-
   return (
     <>
-      <div className="pb-20">
+      <div className="xl:pb-20 pb-5">
         <p className="ml-5 md:ml-32 text-3xl font-bold">
           {t("What to read next")}
         </p>
       </div>
-      <div className="mx-28 flex flex-col md:flex-row">
+      <div className="xl:mx-28 lg:mx-2 mx-[10%] mb-5 flex flex-col lg:flex-row">
         {filteredArray.map((item) => (
           <div key={item.path} className="mx-5 pt-14 md:w-10/12">
             <div>
               <img src={item.picture} alt="Read Next" />
               <p className="pt-5 pb-5 text-base">
-                By <strong className="text-amber-600">{item.author} </strong>| Aug
-                23, 2022
+                By <strong className="text-amber-600">{item.author} </strong>|
+                Aug 23, 2022
               </p>
               <Link
                 to={`${generateRoutePath({ name: RouteName.Blog })}/${
@@ -46,7 +44,6 @@ const WhatToReadNext = ({ selectedPath }: TypeProps) => {
           </div>
         ))}
       </div>
-
     </>
   );
 };

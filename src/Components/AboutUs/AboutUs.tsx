@@ -13,13 +13,13 @@ const AboutUs = () => {
   return (
     <>
       <NavBar />
-      <div className="w-full flex items-center justify-center mt-8 md:mt-28 mb-10  mr-2">
-        <div className="flex items-start flex-col justify-center w-full md:w-3/4">
+      <div className="w-full flex items-center justify-center mt-8 xl:mt-28 xl:px-0 px-5 mb-10  mr-2">
+        <div className="flex items-start flex-col justify-center w-full xl:w-3/4">
           <div className="bg-white">
-            <p className="text-base pb-3 md:pb-5">{t("ABOUT US")}</p>
+            <p className="text-base pb-3 xl:pb-5">{t("ABOUT US")}</p>
           </div>
-          <div className="flex flex-col md:flex-row items-start justify-between w-full">
-            <p className="text-3xl md:text-4xl font-bold max-w-2xl pb-4 md:pb-0 md:pr-32">
+          <div className="flex flex-col xl:flex-row items-start justify-between w-full">
+            <p className="text-3xl xl:text-4xl font-bold max-w-2xl pb-4 xl:pb-0 xl:pr-32">
               {t("We are a team of content writers who share their learnings")}
             </p>
             <div className="text-base text-slate-500 max-w-md">
@@ -30,24 +30,24 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="pl-4 md:pl-32 relative mr-4 md:w-11/12">
-        <img className="w-full md:w-auto" src={people} alt="People"></img>
+      <div className="pl-4 xl:pl-32 relative mr-4 xl:w-11/12">
+        <img className="w-full xl:w-auto" src={people} alt="People"></img>
         <div className="absolute bottom-0 md:ml-20">
-          <div className="bg-amber-300 flex items-center justify-center py-4 md:py-8">
-            <div className="px-4 md:px-8">
+          <div className="bg-amber-300 flex items-center justify-center py-4 xl:py-8">
+            <div className="px-4 xl:px-8">
               <p className="text-4xl md:text-5xl font-bold pb-2">12+</p>
               <p>{t("Blogs Published")}</p>
             </div>
-            <div className="px-4 md:px-8">
+            <div className="px-4 xl:px-8">
               <p className="text-4xl md:text-5xl font-bold pb-2">18K+</p>
               <p>{t("Views on Finsweet")}</p>
             </div>
-            <div className="px-4 md:px-8">
-              <p className="text-4xl md:text-5xl font-bold pb-2">30K+</p>
+            <div className="px-4 xl:px-8">
+              <p className="text-4xl xl:text-5xl font-bold pb-2">30K+</p>
               <p>{t("Total active Users")}</p>
             </div>
           </div>
-          <div className="h-4 md:h-6 bg-amber-300 left-1/2" />
+          <div className="h-4 xl:h-6 bg-amber-300 left-1/2" />
         </div>
       </div>
       <OurMission />

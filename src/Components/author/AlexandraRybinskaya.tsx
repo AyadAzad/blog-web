@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
 import AlexandraRybinskay from "../../assets/Alexandra_Rybinskaya.jpg";
 import Pattern from "../../assets/Pattern.png";
 import Footer from "../Footer.tsx";
 import NavBar from "../NavBar.tsx";
 import SashaPosts from "../BlogCatagory/SashaPosts.tsx";
+
 const AlexandraRybinskaya = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <NavBar />
@@ -12,7 +16,7 @@ const AlexandraRybinskaya = () => {
           <div className="flex w-full max-w-screen-lg flex-col items-stretch mt-24 max-md:max-w-full max-md:mt-10">
             <div className="max-md:max-w-full">
               <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                <div className="flex flex-col items-stretch w-3/12 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col sm:items-center items-stretch w-3/12 max-md:w-full max-md:ml-0">
                   <img
                     loading="lazy"
                     src={AlexandraRybinskay}
@@ -25,11 +29,9 @@ const AlexandraRybinskaya = () => {
                       Hey there, I’m Alexandra Rybinskaya and welcome to my Blog
                     </div>
                     <div className="justify-center text-zinc-500 text-base leading-7 self-stretch max-w-[720px] mr-5 mt-14 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Non blandit massa enim nec. Scelerisque viverra
-                      mauris in aliquam sem. At risus viverra adipiscing at in
-                      tellus.
+                      {t(
+                        "Welcome to my world of creativity and research! My name is Alexandra Rybinskaya, and I am the co-founder of this blog. Here I share my thoughts, ideas and discoveries. My blog is not only a place where I share my stories, but also an invitation to discussion and inspiration. Here you will find articles that shed light on various aspects, as well as reflections on life, creativity and development. My goal is to inspire you with new ideas, help you grow and develop, and create a community of like-minded people where everyone can find inspiration and support. Join me on this exciting journey! Thank you for making this journey with me."
+                      )}
                     </div>
                   </span>
                 </div>
@@ -43,7 +45,7 @@ const AlexandraRybinskaya = () => {
           </div>
         </div>
         <span className="self-center flex w-full max-w-screen-lg flex-col items-stretch  px-5 max-md:max-w-full max-md:my-10">
-         <SashaPosts/>
+          <SashaPosts />
         </span>
       </div>
       <Footer />
