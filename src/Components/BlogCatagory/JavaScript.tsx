@@ -1,22 +1,22 @@
 import { useTranslation } from "react-i18next";
-import PostListData from "../Blogs/PostListData.tsx";
+import blog_info from "../Blogs/blog_info.json";
 import NavBar from "../NavBar.tsx";
 import FilterPosts from "./FilterPosts.tsx";
 import Footer from "../Footer.tsx";
 
-const Startup = () => {
+const JavaScript = () => {
   const { t } = useTranslation();
 
-  const startupPosts = PostListData.filter(
-    (post) => post.catagory === "Startup"
+  const economyPosts = blog_info.filter(
+    (post) => post.blog_category === "#JavaScript"
   );
 
   return (
     <>
       <NavBar />
-      <FilterPosts title={t("Startup")} posts={startupPosts} />
+      <FilterPosts title={t("JavaScript")} posts={economyPosts} />
       <Footer />
     </>
   );
 };
-export default Startup;
+export default JavaScript;

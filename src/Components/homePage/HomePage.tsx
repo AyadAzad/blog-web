@@ -9,14 +9,12 @@ import Testimonials from "./Testimonials.tsx";
 import WhyWeStarted from "./WhyWeStarted.tsx";
 import NavBar from "../NavBar.tsx";
 import Footer from "../Footer.tsx";
-import { Link } from "react-router-dom";
-import { RouteName, generateRoutePath } from "../../App/index.ts";
-import PostListData from "../Blogs/PostListData.tsx";
+import blog_info from "../Blogs/blog_info.json";
 
 const HomePage = () => {
   const { t } = useTranslation();
-  const randomPostIndex = Math.floor(Math.random() * PostListData.length);
-  const randomPost = PostListData[randomPostIndex];
+  const randomPostIndex = Math.floor(Math.random() * blog_info.length);
+  const randomPost = blog_info[randomPostIndex];
 
   return (
     <>
@@ -32,13 +30,13 @@ const HomePage = () => {
         >
           <p className="sm:font-normal font-bold text-base pb-3">
             {t("POSTED ON ")}
-            <b>{t(randomPost.catagory)}</b>
+            <b>{t(randomPost.blog_category)}</b>
           </p>
           <p className="pb-5 text-2xl sm:text-4xl lg:text-6xl sm:font-normal font-bold ">
-            {t(randomPost.title)}
+            {t(randomPost.blog_name)}
           </p>
           <p className="pb-3 text-base sm:font-normal font-bold ">
-            By <strong className="text-amber-300">{randomPost.author}</strong> |
+            <strong className="text-amber-300">{randomPost.blog_category}</strong> |
             May 23, 2022
           </p>
           <p className="pb-3 text-base sm:font-normal font-bold ">
@@ -46,15 +44,11 @@ const HomePage = () => {
               "Our team is aimed at actively developing the blog, supporting and motivating our authors."
             )}
           </p>
-          <Link
-            to={`${generateRoutePath({ name: RouteName.Blog })}/${
-              randomPost.path
-            }`}
-          >
+            <a href={randomPost.blog_link}>
             <button className="font-bold text-center  bg-amber-300 text-black md:w-1/4 w-1/2 h-14 transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110">
               {t("Read More")} &#62;
             </button>
-          </Link>
+            </a>
         </div>
       </div>
       <FuturePosts />

@@ -22,10 +22,10 @@ export enum RouteName {
   AlexandraRybinskaya = "AlexandraRybinskaya",
   JennyWilson = "JennyWilson",
   LeslieAlexander = "LeslieAlexander",
-  Business = "Business",
-  Economy = "Economy",
-  Startup = "Startup",
-  Technology = "Technology",
+  Python = "Python",
+  Javascript = "Javascript",
+  React = "React",
+  Podcast = "Podcast",
 }
 
 export type Containers =
@@ -39,7 +39,7 @@ export type Containers =
   | RouteName.AlexandraRybinskaya
   | RouteName.JennyWilson
   | RouteName.LeslieAlexander
-  | RouteName.Business
-  | RouteName.Economy
-  | RouteName.Startup
-  | RouteName.Technology;
+  | RouteName.Python
+  | RouteName.Javascript
+  | RouteName.React
+  | RouteName.Podcast;

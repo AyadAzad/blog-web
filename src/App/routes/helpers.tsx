@@ -10,10 +10,10 @@ import AyadAzad from "../../Components/author/AyadAzad";
 import AlexandraRybinskaya from "../../Components/author/AlexandraRybinskaya";
 import JennyWilson from "../../Components/author/JennyWilson";
 import LeslieAlexander from "../../Components/author/LeslieAlexander";
-import Business from "../../Components/BlogCatagory/Business";
-import Economy from "../../Components/BlogCatagory/Economy";
-import Startup from "../../Components/BlogCatagory/Startup";
-import Technology from "../../Components/BlogCatagory/Technology";
+import Python from "../../Components/BlogCatagory/Python.tsx";
+import JavaScript from "../../Components/BlogCatagory/JavaScript.tsx";
+import React from "../../Components/BlogCatagory/React.tsx";
+import Podcast from "../../Components/BlogCatagory/Podcast.tsx";
 
 export const containerPaths: { [key in Containers]: string } = {
   [RouteName.Home]: "/home",
@@ -26,10 +26,10 @@ export const containerPaths: { [key in Containers]: string } = {
   [RouteName.AlexandraRybinskaya]: "/AlexandraRybinskaya",
   [RouteName.JennyWilson]: "/JennyWilson",
   [RouteName.LeslieAlexander]: "/LeslieAlexander",
-  [RouteName.Business]: "/Business",
-  [RouteName.Economy]: "/Business",
-  [RouteName.Startup]: "/Business",
-  [RouteName.Technology]: "/Business",
+  [RouteName.Python]: "/Python",
+  [RouteName.Javascript]: "/Javascript",
+  [RouteName.React]: "/React",
+  [RouteName.Podcast]: "/Python",
 };
 
 const routes: Record<RouteName, RouteConfig> = {
@@ -102,32 +102,32 @@ const routes: Record<RouteName, RouteConfig> = {
     component: LeslieAlexander,
     isAuthor: true,
   },
-  [RouteName.Business]: {
-    label: "Business",
-    path: "/business",
-    key: RouteName.Business,
-    component: Business,
+  [RouteName.Python]: {
+    label: "Python",
+    path: "/python",
+    key: RouteName.Python,
+    component: Python,
     showInChooseCategory: true,
   },
-  [RouteName.Economy]: {
-    label: "Economy",
-    path: "/economy",
-    key: RouteName.Economy,
-    component: Economy,
+  [RouteName.Javascript]: {
+    label: "Javascript",
+    path: "/javascript",
+    key: RouteName.Javascript,
+    component: JavaScript,
     showInChooseCategory: true,
   },
-  [RouteName.Startup]: {
-    label: "Startup",
-    path: "/startup",
-    key: RouteName.Startup,
-    component: Startup,
+  [RouteName.React]: {
+    label: "React",
+    path: "/react",
+    key: RouteName.React,
+    component: React,
     showInChooseCategory: true,
   },
-  [RouteName.Technology]: {
-    label: "Technology",
-    path: "/technology",
-    key: RouteName.Technology,
-    component: Technology,
+  [RouteName.Podcast]: {
+    label: "Podcast",
+    path: "/podcast",
+    key: RouteName.Podcast,
+    component: Podcast,
     showInChooseCategory: true,
   },
 };

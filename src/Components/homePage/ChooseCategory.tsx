@@ -10,10 +10,10 @@ const ChooseCategory = () => {
   const { t } = useTranslation();
 
   const iconChooseCategory: Record<string, { img: string }> = {
-    [RouteName.Business]: { img: business },
-    [RouteName.Startup]: { img: technoogy },
-    [RouteName.Technology]: { img: technoogy },
-    [RouteName.Economy]: { img: economy },
+    [RouteName.Python]: { img: business },
+    [RouteName.Javascript]: { img: technoogy },
+    [RouteName.Podcast]: { img: technoogy },
+    [RouteName.React]: { img: economy },
   };
   return (
     <>

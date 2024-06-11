@@ -1,14 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import PostListData from "../Blogs/PostListData";
-import { generateRoutePath } from "../../App/routes";
-import { RouteName } from "../../App/routes";
+import blog_info from "../Blogs/blog_info.json";
 
 const FuturePosts = () => {
   const { t } = useTranslation();
 
-  const featuredPost = Math.floor(Math.random() * PostListData.length);
-  const randomPost = PostListData[featuredPost];
+  const featuredPost = Math.floor(Math.random() * blog_info.length);
+  const randomPost = blog_info[featuredPost];
 
   return (
     <div className="pt-8 xl:pt-32 flex flex-col xl:flex-row px-4 xl:px-32 pb-4 xl:pb-20">
@@ -19,28 +16,22 @@ const FuturePosts = () => {
         <div>
           <img
             className="w-full xl:w-3/4 pb-4 sm:pb-11 cursor-pointer"
-            src={randomPost.picture}
+            src={randomPost.blog_img}
             alt="Featured Post"
           />
           <p className="pb-4 xl:pb-11 text-base">
-            By <strong className="text-indigo-700">{randomPost.author}</strong>{" "}
+            By <strong className="text-indigo-700">Ayad + Sasha</strong>{" "}
             | May 23, 2022
           </p>
           <p className="pb-4 xl:pb-11 font-bold text-xl xl:text-3xl w-full xl:w-3/4">
-            {randomPost.title}
+            {randomPost.blog_name}
           </p>
-          <p className="pb-4 xl:pb-11 text-xl xl:text-1xl w-full xl:w-3/4">
-            {randomPost.text}
-          </p>
-          <Link
-            to={`${generateRoutePath({ name: RouteName.Blog })}/${
-              randomPost.path
-            }`}
-          >
+
+          <a href={randomPost.blog_link}>
             <button className="font-bold text-center bg-amber-300 text-black w-full xl:w-52 h-14 cursor-pointer transition duration-500 ease-in-out hover:bg-amber-400 transform hover:-translate-y-1 hover:scale-110">
               {t("Read More")} &#62;
             </button>
-          </Link>
+          </a>
         </div>
       </div>
       <div>
@@ -48,21 +39,17 @@ const FuturePosts = () => {
           {t("All posts")}
         </p>
         <div className=" text-base">
-          {PostListData.map((item) => (
-            <div key={item.path} className="mb-4 xl:mb-20 hover:bg-amber-100">
+          {blog_info.map((item) => (
+            <div key={item.blog_link} className="mb-4 xl:mb-20 hover:bg-amber-100">
               <p>
-                By <strong className="text-indigo-700">{item.author} </strong>|
+                By <strong className="text-indigo-700">Ayad + Sasha </strong>|
                 May 23, 2022
               </p>
+              <a href={item.blog_link}>
               <p className="text-xl xl:text-2xl font-bold">
-                <Link
-                  to={`${generateRoutePath({ name: RouteName.Blog })}/${
-                    item.path
-                  }`}
-                >
-                  {item.title}
-                </Link>
+                  {item.blog_name}
               </p>
+              </a>
             </div>
           ))}
         </div>
