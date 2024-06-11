@@ -1,40 +1,16 @@
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from 'react';
-import axios from "axios";
+import blogs from './blog_info.json'
 
 interface Blog {
     blog_link: string,
     blog_img: string;
     blog_category: string;
     blog_name: string;
-    text: string; // Added text property
+
 }
 
 const AllPosts = () => {
     const { t } = useTranslation();
-    const [blogs, setBlogs] = useState<Blog[]>([]); // Set type for blogs
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<any>(null); // Set type for error
-
-    useEffect(() => {
-        axios.get('https://blog-api-d5p4.onrender.com/')
-            .then(response => {
-                setBlogs(response.data);
-                setLoading(false);
-            })
-            .catch(error => {
-                setError(error);
-                setLoading(false);
-            });
-    }, []);
-
-    if (loading) {
-        return <div>Loading...</div>; // Render loading state
-    }
-
-    if (error) {
-        return <div>Error: {error.message}</div>; // Render error state
-    }
 
     return (
         <div className="flex flex-col mt-20 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
@@ -42,7 +18,7 @@ const AllPosts = () => {
                 {t("All posts")}
             </div>
             <div className="bg-zinc-500 self-stretch h-px mt-9 max-md:max-w-full" />
-            {blogs.map((post) => (
+            {blogs.map((post: Blog) => (
                 <div key={post.blog_link} className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                         <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
@@ -64,9 +40,6 @@ const AllPosts = () => {
                                 </div>
                                 <div className="text-gray-800 text-4xl font-bold leading-10 tracking-tighter mt-8 max-md:max-w-full">
                                     {post.blog_name}
-                                </div>
-                                <div className="text-zinc-500 text-base leading-7 mt-7 max-md:max-w-full">
-                                    {post.text}
                                 </div>
                             </span>
                         </div>
