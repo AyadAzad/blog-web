@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
-import blogs from './blog_info.json'
+// import blogs from './blog_info.json'
+import {useEffect, useState} from "react";
+
 
 interface Blog {
     blog_link: string,
@@ -11,14 +13,29 @@ interface Blog {
 
 const AllPosts = () => {
     const { t } = useTranslation();
+    const [blogData, setBlogData] = useState<Blog[]>([]);
+    useEffect(() =>{
+       const fetchData = async () =>{
+               const tech_blog = await fetch("https://ayadazad.github.io/insightblogas_api/tech_blog.json")
+               const tech_data = await tech_blog.json()
 
+               const finance_blog = await fetch("https://ayadazad.github.io/insightblogas_api/Finance_blog.json")
+               const finance_data = await finance_blog.json()
+
+               const AllData = tech_data.concat(finance_data)
+               setBlogData(AllData)
+
+       }
+         fetchData()
+
+    }, [])
     return (
         <div className="flex flex-col mt-20 px-20 max-md:max-w-full max-md:mt-10 max-md:px-5">
             <div className="text-gray-800 text-5xl font-bold leading-[63.84px] tracking-tighter self-stretch max-md:text-4xl">
                 {t("All posts")}
             </div>
             <div className="bg-zinc-500 self-stretch h-px mt-9 max-md:max-w-full" />
-            {blogs.map((post: Blog) => (
+            {blogData.map((post: Blog) => (
                 <div key={post.blog_link} className="self-stretch mt-16 max-md:max-w-full max-md:mt-10">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                         <div className="flex flex-col items-stretch w-[44%] max-md:w-full max-md:ml-0">
